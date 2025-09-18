@@ -28,7 +28,7 @@ for json_file in jsons:
         chunk['embedding'] = embeddings[i]
         chunk_id += 1
         my_dicts.append(chunk)
-    break
+    
 
 df = pd.DataFrame.from_records(my_dicts)
 # Save the DataFrame to a file using joblib for later use   
