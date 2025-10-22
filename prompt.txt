@@ -6,7 +6,7 @@ Do NOT repeat the subtitle chunks or say 'according to the provided chunks'.
 If the question is unrelated, reply: 'I can only answer questions related to the course.'
 If you don't know, reply: 'I don't know.'
 
-User question: "what is this course for"
+User question: "where css is taught?"
 
 Video subtitle chunks (for your reference only):
-[{"title":"CSS Fonts, Text & Color Properties","number":"19","start":1882.88,"end":1883.8,"text":" in this course"},{"title":"Installing VS Code & How Websites Work","number":"01","start":1723.06,"end":1726.06,"text":" to launch this course"},{"title":"Inline & Block Elements in HTML","number":"08","start":554.0,"end":555.0,"text":" To find this course."},{"title":"Installing VS Code & How Websites Work","number":"01","start":1738.06,"end":1741.06,"text":" this course is free"},{"title":"Installing VS Code & How Websites Work","number":"01","start":1563.14,"end":1566.14,"text":" so like this course"}]
+[{"title":"Your First HTML Website","number":"02","start":850.76,"end":851.76,"text":" I will teach CSS"},{"title":"Introduction to CSS","number":"14","start":257.6,"end":259.6,"text":" So, what is CSS?"},{"title":"Introduction to CSS","number":"14","start":48.52,"end":50.16,"text":" how CSS is written."},{"title":"Heading, Paragraphs and Links","number":"04","start":1028.0,"end":1030.0,"text":" We will learn styling from CSS."},{"title":"Inline & Block Elements in HTML","number":"08","start":501.0,"end":503.0,"text":" How to use CSS."}]

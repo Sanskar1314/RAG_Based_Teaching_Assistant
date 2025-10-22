@@ -1,11 +1,5 @@
-To find out what the Sigma Web Development course is for, you can start by watching the video with subtitle "Inline & Block Elements in HTML", which is at timestamp 5 minutes 4 seconds.
+To learn about CSS, you can start with the video titled "Introduction to CSS" at timestamps 48:52-50:16 or 257:20-259:00. 
 
-In this video, you'll learn about HTML elements and how they're used to structure your website. This knowledge will help you understand the basics of web development.
+These videos will cover the basics of CSS and how it's written. Additionally, you can also watch "Your First HTML Website" (02) for a brief introduction to CSS before diving into more details.
 
-Next, watch the video with subtitle "Installing VS Code & How Websites Work", specifically from timestamp 17 minutes 22 seconds onwards. In this part of the video, you'll see how websites are launched and how the course can be accessed.
-
-Additionally, check out the video with subtitle "Installing VS Code & How Websites Work" again, starting at timestamp 15 minutes 40 seconds. This part explains that the course is free and easy to launch.
-
-Lastly, look for the video with subtitle "CSS Fonts, Text & Color Properties", which starts at timestamp 19 minutes 38 seconds. In this section, you'll learn about CSS properties related to fonts, text, and colors.
-
-These videos will give you a good starting point to understand what the Sigma Web Development course is all about.
+By watching these videos, you'll gain a solid understanding of CSS and be able to learn styling from HTML using CSS, as mentioned in the video titled "Heading, Paragraphs and Links" (04).
