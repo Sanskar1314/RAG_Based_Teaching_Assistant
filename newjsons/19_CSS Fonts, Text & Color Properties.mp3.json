@@ -1,0 +1,1895 @@
+{
+    "chunks": [
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 0.0,
+            "end": 19.54,
+            "text": " In today's video, we will see how fonts and color CSS work.  In this video, I will also tell you how you can use external fonts in your website.  We will know how font sizes can be changed, what is the concept of fallback font.  And I will tell you all this with examples.  Let's go to the computer screen."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 19.54,
+            "end": 46.16,
+            "text": " Let's roll the intro.  So guys, I will say again that today's video is going to be a very important video.  Because in this video, I will tell you about fonts and colors.  And any website you make in your life, fonts and colors will definitely be visible to you.  So as always, I will click on shift right here."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 46.4,
+            "end": 62.4,
+            "text": " In fact, I will make a new folder by clicking here.  In which I will make a folder named video 19.  I will open it by clicking on shift right.  And as soon as I open it, you can see here.  I have made a file named index.html here."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 62.4,
+            "end": 73.58,
+            "text": " And I am going to write internal CSS here.  Because I don't want to make a style sheet.  So that everything of you is on the same page.  So first of all, I will make a div here.  And I will write h1 in this div."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 73.58,
+            "end": 87.32,
+            "text": " And I will write fonts in h1.  And I will put a paragraph in it.  This is a video on fonts.  Now I want to tell you that if you have not accessed the playlist yet.  Then click here and bookmark."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 87.32,
+            "end": 95.58,
+            "text": " Because you can do it by clicking here.  Or click here and save it.  And along with that, the source code is being updated.  You can see this too.  I have updated the source code of all the videos."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 95.58,
+            "end": 107.58,
+            "text": " So I do the source code update from time to time.  If I preview it and show it to you.  So no surprises, here fonts and this is a video on fonts.  But the interesting thing is that you can change the font.  Now many people will be beginners here."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 107.58,
+            "end": 116.58,
+            "text": " And they don't know what font is.  This is a different font.  And this is a different font.  And this is a different font.  That means if you see the text appearing different."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 116.58,
+            "end": 128.57999999999998,
+            "text": " Then it looks different because of the font.  So if we want to change the font of any element.  Then we use font family.  So I can easily put a style tag here.  That paragraph, make its font family."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 128.57999999999998,
+            "end": 142.08,
+            "text": " What to do?  So now see a lot of options are automatically giving me VS Code.  Suppose I want to see COGUI and along with that Tahoma.  And so many fonts are available here.  These are comma separated values."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 142.08,
+            "end": 153.08,
+            "text": " Which will try to put the first font here.  If this font is not available in your system.  Then it will try to put this font.  And so on.  So these are called fallback fonts."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 153.08,
+            "end": 164.08,
+            "text": " That is, the main font is COGUI.  And Tahoma, Geneva, Vardana, San Serif.  These are fallback fonts.  So you see here.  As soon as I show you here."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 164.08,
+            "end": 177.08,
+            "text": " So its font has changed a little.  If I want to change the font family of my H1.  Now suppose I want Times New Roman to come here.  So I will put Times New Roman in the font family.  And I think by default it is Times New Roman."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 177.08,
+            "end": 189.08,
+            "text": " So there is no difference here.  But let's try something else.  And as soon as I write font family here.  I will write like this.  So let's do Lucid Ascent."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 189.08,
+            "end": 203.08,
+            "text": " And this is a set of font family.  So see here that I have changed the font.  This font looks a little better now.  Compared to the previous font.  So you can change the font from the font family."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 203.08,
+            "end": 214.08,
+            "text": " Now whenever we put font family.  So it is said that whenever you are putting font family.  So put at least one generic font family.  So that if the user's computer does not have that font.  Then there is no problem."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 214.08,
+            "end": 226.08,
+            "text": " In this case, it is suggested that like Times New Roman.  Like COUI, like Sans Serif.  It is necessary to put a font family.  Whenever you are making websites in your fonts.  So this way you can give fonts here."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 226.08,
+            "end": 239.08,
+            "text": " Now we have a lot of properties related to fonts.  Like if I want in paragraph.  That the font style.  I want to make it italic.  So I can make bold italic."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 239.08,
+            "end": 250.08,
+            "text": " My font style.  I made font style italic here.  So I can do it this way.  In font style we have one italic.  And one is normal and one is oblique."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 250.08,
+            "end": 260.08000000000004,
+            "text": " Bold is not there.  For bold we have to use font weight.  So if I make it oblique here.  So it will look like this.  And with that if I can't even underline it."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 260.08000000000004,
+            "end": 272.08,
+            "text": " I will have to use text decoration for underline.  So these values are here.  Now here it is usually used for italic.  So if you want to do italic.  You will use font style."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 272.08,
+            "end": 280.08,
+            "text": " As soon as you write font here.  See a lot of properties related to fonts.  And I want to tell you font weight here.  These are all values.  Bold, bolder, lighter."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 280.08,
+            "end": 290.08,
+            "text": " And you can also put values like this.  So see it has become a little thick.  So whenever you want to bold.  So you can use this.  So you can do oblique."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 290.08,
+            "end": 302.08,
+            "text": " You can do italic with font style.  You can do normal.  And if you want to underline here.  So you can use text decoration.  So text decoration is a property."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 302.08,
+            "end": 309.08,
+            "text": " With which you can underline.  So I want to tell you this.  And you can also do overline.  So the way you see overline.  Line comes up."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 309.08,
+            "end": 316.08,
+            "text": " But all these properties.  I am telling you honestly.  It is not that much useful.  As much as you will get italic.  And then font weight will come."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 316.08,
+            "end": 323.08,
+            "text": " So here is a code pen.  I put the link of which here.  Before I forget.  I put the link of this here.  Code pen."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 323.08,
+            "end": 330.08,
+            "text": " And this code pen link will tell you.  Which font families.  How it looks.  So see here.  Serif looks like this."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 330.08,
+            "end": 337.08,
+            "text": " Senserif looks like this.  Monospace looks like this.  And cursive looks like this.  And you can see here.  This code pen is showing a lot of things from here."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 337.08,
+            "end": 343.08,
+            "text": " How your families look like.  Okay.  Now what happens.  Usually when you do web development.  So you will want."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 343.08,
+            "end": 352.08,
+            "text": " That you use some special fonts.  Like I use Ballu Bhai.  Ballu Bhai is a font.  Which I like a lot.  Yes Ballu Bhai and Ballu Behna."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 352.08,
+            "end": 361.08,
+            "text": " These are the names of both the fonts.  I will show you now.  And in this way you use Google Fonts.  So I will show you how to use Google Fonts.  So if you see here."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 361.08,
+            "end": 371.08,
+            "text": " I will write Google Fonts in the new tab.  And as soon as I come to Google Fonts.  I can actually use a font.  If I write here Ballu Bhai.  Ballu Bhai."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 371.08,
+            "end": 379.08,
+            "text": " I hope I am spelling it correct.  Ballu Bhai.  There is also Ballu Da.  There is also Ballu Behna.  And here I am not getting Ballu Bhai font."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 379.08,
+            "end": 386.08,
+            "text": " Why is this Arabic font showing me.  I will come here to home.  And I will write here.  Hey I am good.  And here you see."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 386.08,
+            "end": 395.08,
+            "text": " Ballu Bhai, Ballu Behna, Ballu Bhai 2.  All these fonts are visible to me.  Now if I click here.  So you see here.  Ballu Bhai 2 will look like this in English."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 395.08,
+            "end": 402.08,
+            "text": " Now suppose I want to use this font.  I reset it.  If I want to use it.  So what I will do simply.  I will click here."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 402.08,
+            "end": 410.08,
+            "text": " Suppose I don't want medium 500.  I want my font to look like this.  Or I want it to look normal.  So I will click on plus.  And it will give me a font here."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 410.08,
+            "end": 418.08,
+            "text": " Now there are two ways to include fonts.  Either you do it through link.  Or you do it through import.  If you are doing it through import.  Then you put it in style tag."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 418.08,
+            "end": 426.08,
+            "text": " Import statement.  Which I will show you now.  And I hope I am not going fast.  I am just trying that I am not repetitive.  And I can take your time."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 426.08,
+            "end": 433.08,
+            "text": " And teach you as much as possible.  So here you can see.  I did import URL like this.  Now if I want here.  I will comment this."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 433.08,
+            "end": 441.08,
+            "text": " And I will write here font family.  And in fact what I will do.  I will copy from here.  Because here font family is given.  How to apply."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 441.08,
+            "end": 446.08,
+            "text": " So it becomes a little convenient.  Copy and paste.  And here see.  Ballu Bhai has given sans serif.  By chance you don't have."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 446.08,
+            "end": 452.08,
+            "text": " Ballu Bhai 2 font.  So you got sans serif.  Now you can see here.  This font looks exactly like this.  Hey I am good as it was written."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 452.08,
+            "end": 459.08,
+            "text": " It is seen here.  And I will remove italic from it.  And I also remove font weight.  Because these two things.  I just told you to teach."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 459.08,
+            "end": 465.08,
+            "text": " You want exactly.  Font to look like you.  As you have downloaded.  And I can see it the same.  Because I have this Ballu Bhai 2."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 465.08,
+            "end": 472.08,
+            "text": " It is downloaded the same way.  From here.  You can see here.  That I got this font.  Now if I want."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 472.08,
+            "end": 478.08,
+            "text": " To use this link.  So I actually.  By copying this link.  Then I will remove this import from here.  And now I will put it."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 478.08,
+            "end": 485.08,
+            "text": " In my head tag.  I do the right click format document.  So that unnecessary spaces go.  And you can see here.  That I have through link."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 485.08,
+            "end": 491.08,
+            "text": " This font.  Included in my web page.  So in my web page.  Through html.  I can include fonts."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 491.08,
+            "end": 498.08,
+            "text": " And if I want.  So I can include through style tag.  Font.  As you have seen here.  And you see here."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 498.08,
+            "end": 503.08,
+            "text": " That my Ballu Bhai.  It is intact.  My Ballu Bhai font.  I can see here.  Which is a good thing."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 503.08,
+            "end": 510.08,
+            "text": " You can use many fonts like this.  Poppins.  Which I use a lot.  To be honest.  Poppins is one of my favorite fonts."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 510.08,
+            "end": 516.0799999999999,
+            "text": " So I want to include Poppins.  So it is always recommended.  That you.  All the fonts you want to include.  You include them all at once."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 516.0799999999999,
+            "end": 523.0799999999999,
+            "text": " Like I want this Poppins.  I included this.  So I.  This link and imports.  I will bring them all at once."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 523.0799999999999,
+            "end": 528.0799999999999,
+            "text": " See here.  In one request.  I will bring both the fonts.  So it is always recommended.  That you."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 528.0799999999999,
+            "end": 535.08,
+            "text": " I will remove this link tag from here.  Because I am putting imports now.  You have to put only one of these.  So see here.  From the same import statement."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 535.08,
+            "end": 545.08,
+            "text": " Ballu Bhai is also coming.  And from the same import statement.  Poppins font is also coming here.  So one arrow two targets.  You can also do one arrow fifty targets."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 545.08,
+            "end": 552.08,
+            "text": " But I don't think.  You will need fifty fonts in a web page.  Now see here.  If I want.  That my heading is Poppins."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 552.08,
+            "end": 559.08,
+            "text": " So what I will do simply.  Like it is written here.  Poppins and Sarif.  So I will make the Poppins font here first.  And Poppins is available now."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 559.08,
+            "end": 564.08,
+            "text": " So what will happen.  That Poppins will be applied.  So see my H1.  Poppins is applied to it.  You can see here."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 564.08,
+            "end": 571.08,
+            "text": " I use Poppins font a lot.  It is one of my favorite fonts.  But you go to Google fonts.  There are a lot of fonts.  Explore them."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 571.08,
+            "end": 580.08,
+            "text": " You will enjoy.  I can guarantee you this.  So this was about fonts in CSS.  And some more properties of fonts.  I want to tell you about."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 580.08,
+            "end": 591.08,
+            "text": " Another property is font size.  Like you can change the font size.  If I talk about font size.  So I can use large, large and medium here.  X small, double X large."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 591.08,
+            "end": 601.08,
+            "text": " But I will recommend you pixel units.  Then we will talk about more units.  So if I do 20 pixels here.  So you can see here.  That font will be a little big."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 601.08,
+            "end": 611.08,
+            "text": " Now I want to show you one thing.  If I don't put any font size here.  That is, I have not put anything.  So by default.  One size will be of H1 here."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 611.08,
+            "end": 619.08,
+            "text": " One size will be of paragraph here.  And this styling will be.  Default browser styling.  And to see this.  I will disappear my face."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 619.08,
+            "end": 626.08,
+            "text": " Now look here.  H1 is here.  I will select this.  I will go to computed.  And look here."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 626.08,
+            "end": 633.08,
+            "text": " Font size 32 pixels.  So I do one thing here.  I reset it.  Just in case.  No value is damaged through zoom."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 633.08,
+            "end": 639.08,
+            "text": " Font size if I write here.  Look 32 pixels of H1.  And the paragraph.  What is its default font size?  16 pixels."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 639.08,
+            "end": 645.08,
+            "text": " You can see here.  16 pixels is the default font size.  So if I want.  My font size should be a little bigger.  20 pixels."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 645.08,
+            "end": 653.08,
+            "text": " So I will make it 20 pixels.  And now you can see here.  20 pixels font size.  You can see here.  This is a video on fonts."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 653.08,
+            "end": 660.08,
+            "text": " Now you can select it here.  You can increase the font through arrow keys.  I am using up arrow key.  To increase the font.  Okay."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 660.08,
+            "end": 666.08,
+            "text": " And I can use down arrow key.  To make my font.  To make it smaller.  Okay.  So here you see."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 666.08,
+            "end": 672.08,
+            "text": " I can make my font smaller.  I kept pressing up arrow key.  I kept pressing down arrow key.  So you can adjust here.  CSS."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 672.08,
+            "end": 679.08,
+            "text": " Suppose I want.  Suppose I want 49 pixels.  And I want.  Let's make font weight.  Let's make it 900."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 679.08,
+            "end": 685.08,
+            "text": " No, 900 is a little more.  Let's make it 700.  Let's make it 600.  Yes, 600 is fine.  Then let's say."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 685.08,
+            "end": 692.08,
+            "text": " I want to set its color here.  Let's say red.  And if I like these styles.  Then I will copy them.  Something like this."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 692.08,
+            "end": 699.08,
+            "text": " Try to understand what I am trying to say.  Now if I reload it.  Then all these styles will go.  Because whatever styles you put from here.  They are temporary."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 699.08,
+            "end": 706.08,
+            "text": " But if you want.  To put these styles permanently.  So whatever element you put.  Like I put on paragraph.  Now I can paste these styles here."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 706.08,
+            "end": 712.08,
+            "text": " And they are forever here.  You can see.  I will reload it.  It is still here.  Because I have pasted it in my code."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 712.08,
+            "end": 719.08,
+            "text": " But for now I will not use these styles.  So I hope you understood.  How font size works.  Now after this.  There is a concept of line height."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 719.08,
+            "end": 726.08,
+            "text": " And suppose I do line height.  Let's say 4.  Okay.  I made line height 4.  Of paragraph."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 726.08,
+            "end": 736.08,
+            "text": " And for that I have to put a little content.  Let's say I write another paragraph.  And here I write lorem 45.  And why I wrote lorem 45.  You will tell me in the comment section."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 736.08,
+            "end": 746.08,
+            "text": " Why I wrote 45.  Or why I write 23.  So you see what will happen with line height.  Space will come here.  And here space has come."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 746.08,
+            "end": 754.08,
+            "text": " Because here line height is 4.  Now if I reduce it.  As I reduce it.  As if I made it 1.4.  Or 1.8."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 754.08,
+            "end": 759.08,
+            "text": " So you understood.  That this spacing.  This is line height.  Basically controls.  If you want."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 759.08,
+            "end": 766.08,
+            "text": " That your space of lines increases.  Increase the line height.  If I want to know.  What will be the default value of line height.  Then I will remove the line height from here."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 766.08,
+            "end": 775.08,
+            "text": " And I will go to computed.  And search for line height.  Line height.  Now here I am not getting line height.  In this element."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 775.08,
+            "end": 780.08,
+            "text": " So in this element.  No line height compute.  I guess it didn't happen.  So I will do one thing.  I will search on google."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 780.08,
+            "end": 788.08,
+            "text": " Default line height.  Okay.  So the default line height.  Is about 110 to 120 percent.  So if you want."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 788.08,
+            "end": 796.08,
+            "text": " To change the line height.  So you do more than 1.2.  If you want to do more.  Or you reduce it from 1.2.  And line height."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 796.08,
+            "end": 802.08,
+            "text": " Will help you increase.  Its spacing.  After this.  There is one more property.  Letter spacing."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 802.08,
+            "end": 807.08,
+            "text": " Okay.  And I am telling.  That it is not used so much.  Okay.  And I will increase the letter spacing."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 807.08,
+            "end": 812.08,
+            "text": " So see what is happening here.  It increases the spacing of letters.  Basically.  What she is saying.  So if you ever."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 812.08,
+            "end": 817.08,
+            "text": " Need to increase the letter spacing.  So you can use it.  Letter spacing.  Okay.  So I personally."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 817.08,
+            "end": 822.08,
+            "text": " I don't use it so much.  I make my websites.  But these are all such things.  You should know.  Through this video."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 822.08,
+            "end": 827.08,
+            "text": " I want you to know.  All those things.  Which you guys.  Maybe ever.  If you want to do."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 827.08,
+            "end": 832.08,
+            "text": " Let us say you.  First word.  First letter.  You want to capitalize.  So you should know."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 832.08,
+            "end": 837.08,
+            "text": " Basically how to do it.  There are some things.  You guys don't know.  If you have to do it.  Then it will be a lot of trouble."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 837.08,
+            "end": 842.08,
+            "text": " So I show you here.  That if you want to capitalize.  Any first letter.  Or then.  You have to do."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 842.08,
+            "end": 847.08,
+            "text": " So if you want.  To capitalize.  Any first letter.  Or then.  Any word."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 847.08,
+            "end": 852.08,
+            "text": " Like suppose.  H1.  Okay.  Or then do one thing.  I put H2 here."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 852.08,
+            "end": 857.08,
+            "text": " Okay.  And I write here.  About fonts.  Now I will write H2 here.  I hope you guys can see."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 857.08,
+            "end": 862.08,
+            "text": " I zoom in a little.  If I write H2 here.  Suppose I write here.  Text transform.  And suppose I write here."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 862.08,
+            "end": 867.08,
+            "text": " Capitalize.  So I see here.  About fonts.  If I have made.  F to about."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 867.08,
+            "end": 872.08,
+            "text": " Fonts.  If I have made it small.  So now see here.  About fonts.  A will be capitalized."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 872.08,
+            "end": 877.08,
+            "text": " First letter.  Okay.  Now if I.  In text transform.  Write here."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 877.08,
+            "end": 882.08,
+            "text": " By putting colon.  Lower case.  So you see here.  As soon as I did lower case.  It will be full lower case."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 882.08,
+            "end": 887.08,
+            "text": " If I do upper case.  It will be upper case.  Okay.  Upper case.  And it comes into work."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 887.08,
+            "end": 892.08,
+            "text": " You know.  It is not such a thing.  That it will never come into work.  Everything should not be said.  That it will not come into work."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 892.08,
+            "end": 897.08,
+            "text": " It is actually.  Coming into your work.  Okay.  So this property.  I hope."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 897.08,
+            "end": 902.08,
+            "text": " You guys.  Tie it in your tool belt.  Then it happens here.  I have seen.  Text decoration."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 902.08,
+            "end": 907.08,
+            "text": " Underline text decoration.  It will be underlined.  But I tell you.  About text decoration color.  Text decoration color."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 907.08,
+            "end": 912.08,
+            "text": " Okay.  So here you can see.  Text decoration color.  If you do aqua.  So see here."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 912.08,
+            "end": 917.08,
+            "text": " Underlined with aqua color.  So text decoration color.  You can also change.  And this is very helpful.  When you make navigation bars."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 917.08,
+            "end": 922.08,
+            "text": " And in navigation bars.  It happens many times.  When you hover on them.  Then the color changes.  Or the way the line."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 922.08,
+            "end": 927.08,
+            "text": " Appears.  So all those things.  You can do through CSS.  So I hope.  That you are understanding."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 927.08,
+            "end": 932.08,
+            "text": " Things.  In the comment section.  Sigma.  If you are understanding.  Then very quickly."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 932.08,
+            "end": 937.08,
+            "text": " About two properties.  I tell you.  Text decoration style.  Like suppose.  If I add here."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 937.08,
+            "end": 942.08,
+            "text": " On this element.  Text decoration style.  And I add it here.  So that.  You have the code for your reference."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 942.08,
+            "end": 947.08,
+            "text": " Text decoration style.  And here.  If I want.  Dotted style.  Dotted here."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 947.08,
+            "end": 952.08,
+            "text": " So it will be dotted.  Where is the preview.  Here it is.  So see it is dotted.  If you can't see."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 952.08,
+            "end": 957.08,
+            "text": " So I hope.  It will be visible now.  So if I want.  Dotted.  So my underlining."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 957.08,
+            "end": 962.08,
+            "text": " Will be dotted.  So it will be dotted.  So my underlining.  Will be dotted.  There are many other values."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 962.08,
+            "end": 967.08,
+            "text": " Like you see.  Here it is dotted.  This is double.  This is inherit.  Inherit means."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 967.08,
+            "end": 972.08,
+            "text": " Which is inherited from its parent.  If I do solid.  Then it will be like this.  If I do wavy.  Then it will be like this."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 972.08,
+            "end": 977.08,
+            "text": " Okay.  So all these things.  If you want dash.  If you want dotted.  Then you can do it."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 977.08,
+            "end": 982.08,
+            "text": " Okay.  You see.  Dash is like this.  Dotted is like this.  Then wavy is like this."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 982.08,
+            "end": 987.08,
+            "text": " Okay.  But I will tell.  From my personal experience.  I have done so much web development.  In life."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 987.08,
+            "end": 992.08,
+            "text": " Maybe sometime.  I have done so much web development.  But you should know.  I will say again.  You should know."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 992.08,
+            "end": 997.08,
+            "text": " All these things are like this.  If you don't know.  Then it will be a problem.  Sometime you.  Someone told you."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 997.08,
+            "end": 1002.08,
+            "text": " I want dash.  I want dotted.  So you should know.  How to make.  So these are some properties."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1002.08,
+            "end": 1007.08,
+            "text": " Which you should know.  There is also thickness.  I will tell you the thickness.  And there are many other things.  But you see."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1007.08,
+            "end": 1012.08,
+            "text": " If you want to do thickness.  So you will write text deco.  So see.  It will suggest thickness.  You never feel like typing this."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1012.08,
+            "end": 1017.08,
+            "text": " Text decoration color.  Or type any property.  And you will get thickness.  So you will get thickness.  So you will get thickness."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1017.08,
+            "end": 1022.08,
+            "text": " Or you don't feel like typing any property.  So what you do.  Write T.  Write D.  And write CO."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1022.08,
+            "end": 1027.08,
+            "text": " I will show you.  Like if I don't feel like typing this.  And I want.  I want to get suggested quickly.  So I will write T."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1027.08,
+            "end": 1032.08,
+            "text": " DE.  And TH.  I will show you.  Means.  A little bit of this."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1032.08,
+            "end": 1037.08,
+            "text": " A little bit of this.  And a little bit of this.  And I will get suggested.  Means I want text decoration thickness.  See this is important."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1037.08,
+            "end": 1042.08,
+            "text": " Your productivity will increase.  Text.  Decoration DE.  And TH thickness.  See it came."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1042.08,
+            "end": 1047.08,
+            "text": " And it is showing.  Why it is being suggested.  Because you took TE from here.  DE from here.  TH from here."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1047.08,
+            "end": 1052.08,
+            "text": " If you hit enter.  It will come straight.  And after this.  You simply use arrow key.  What to do here."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1052.08,
+            "end": 1057.08,
+            "text": " Or if you just colon like this.  Then see.  Here it is showing you.  Now what do you want.  How much thickness do you want."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1057.08,
+            "end": 1062.08,
+            "text": " So you can adjust the value of thickness.  So you can adjust the value of thickness.  Okay.  Assume I do something.  45 pixels."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1062.08,
+            "end": 1067.08,
+            "text": " I hope I didn't do too much.  I guess I have done too much.  So I will remove it by not doing dotted.  I will keep it solid.  I will keep it solid."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1067.08,
+            "end": 1072.08,
+            "text": " And you see here.  I have made it a little too thick.  See.  I have to reduce its value a little.  So I will keep it solid."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1072.08,
+            "end": 1077.08,
+            "text": " And you see here.  I have made it a little too thick.  See.  I have to reduce its value a little.  And see."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1077.08,
+            "end": 1082.08,
+            "text": " I will reduce its value.  So it has become a little less.  I think 7 pixels is more than enough.  7 pixels is way more than enough.  So let's do 7 pixels."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1082.08,
+            "end": 1087.08,
+            "text": " And see it got thick.  So sometimes you have to make it thick.  What to make thick.  If you want to make your text decoration thicker.  So you can do something like this."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1087.08,
+            "end": 1092.08,
+            "text": " So you guys use text decoration thickness.  To make it thick.  Okay.  After this.  I would also like to tell you about a text-indent property."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1092.08,
+            "end": 1097.08,
+            "text": " The text-indent property.  Assume I am 45 pixels.  I have made it a little too thick.  So I will keep it solid.  And you see here."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1097.08,
+            "end": 1102.08,
+            "text": " So you can add an indent.  And I would like to show you here.  That my h2.  If I reduce the value of the text-indent.  I am doing it with the arrow key."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1102.08,
+            "end": 1107.08,
+            "text": " So see.  You can do it like this.  Then after this.  To make blogs.  Text overflow is going to be used a lot."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1107.08,
+            "end": 1112.08,
+            "text": " Text overflow property.  Means.  What do you want.  If your text.  Is overflowing from your box."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1112.08,
+            "end": 1117.08,
+            "text": " Then what should happen.  So you can see.  I have made it a little thicker.  So it has become a little less.  So you can see."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1117.08,
+            "end": 1122.08,
+            "text": " So you can see.  So you can see.  So you can see.  So you can see.  So you can see."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1122.08,
+            "end": 1157.08,
+            "text": " So you can see.  So you can see.  So you can see.  What will happen if I make a ellipse.  So what will happen?"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1157.08,
+            "end": 1162.08,
+            "text": " What is the difference between ellipses and clips?  So what will happen?  I will tell you.  If I increase the width.  So it will be like this."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1162.08,
+            "end": 1167.08,
+            "text": " So I will tell you.  If I increase the width.  So it will be like this.  And.  Let's do the same."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1167.08,
+            "end": 1172.08,
+            "text": " For paragraph.  In paragraph.  I think.  We can understand this thing more clearly.  So here I will give a class."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1172.08,
+            "end": 1177.08,
+            "text": " And in the class.  I will do lorem.  I will put a style by doing .lorem.  And I will put a style by doing .lorem.  Right."
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1177.08,
+            "end": 1186.6,
+            "text": " And I will show you the same thing.  And I will show you the same thing.  One is text overflow.  so first of all I will give border 2px solid red  and after this I will give width 45px"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1186.6,
+            "end": 1201.04,
+            "text": " and let's see how it looks, so it looks like this  now what I will say to this paragraph  that if there is text overflow in it then do ellipsis  now here one more important thing is that you have to hide the overflow  which means that if it is overflowing from the box"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1201.04,
+            "end": 1213.6,
+            "text": " what do you want your element  you want scroll, you want hidden  so you see I have hidden the overflow so this is happening with ellipsis  and if I clip it, I will show you by changing its value to clip  so here it is completely clipped, it is hidden"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1213.6,
+            "end": 1227.76,
+            "text": " so there are other properties like this  I would like to tell you another property like this and that is word break  so I will do one thing, I will make it 145  I will do something like this to both of them and here I will write word break  and if I do break all in word break then you see here"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1227.76,
+            "end": 1238.04,
+            "text": " that if I don't do break all here then what is happening  so see here dollar went down  if I do break all then what will happen  that here it will break the word  it has done DOL and OR here"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1238.04,
+            "end": 1247.6399999999999,
+            "text": " so if you want your words to break then you can use this property  word break break all  then after this there is a text align property  let's say I want to center it  so I will put text align center here"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1247.6399999999999,
+            "end": 1262.36,
+            "text": " text align center and now see it is centered  if I reload it then it will go for sure  so I will put it in h2  and I will say text align center  so here it is automatically suggesting me"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1262.36,
+            "end": 1272.88,
+            "text": " and I am taking it as my property  which is very important for me  if I am coding  so you see here about font is centered  I hope you understood this thing"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1272.88,
+            "end": 1283.96,
+            "text": " so these were all text properties  now here text properties are very important  because if you want to make good websites  then you should know everything about text  only then you will be able to control your text"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1283.96,
+            "end": 1296.28,
+            "text": " so these were some text properties  I will give you a link in the description  where you will get to learn additionally about all these things  and all this I have read in this video  after that things will be very intuitive for you"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1296.28,
+            "end": 1312.48,
+            "text": " so what I will do is I will move towards colors  and I will tell you how colors work  so let's do one thing  let's make one more html file with the name of colors.html  because we have spread a lot of mess there"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1312.48,
+            "end": 1322.76,
+            "text": " while understanding fonts  because obviously this is not a good website  I have made this to teach you concepts  and we will make good websites also  so let's talk about colors"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1322.76,
+            "end": 1333.68,
+            "text": " so here I will put its heading colors  and I will put its heading fonts  I know it's not looking good  so I can give it a little beauty by putting its title  now after this I will put style here"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1333.68,
+            "end": 1345.28,
+            "text": " oops I don't know why I put capital S instead of style  and what I will do here  I will write h1 let's learn  learn about colors  now suppose I want to change the color of h1"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1345.28,
+            "end": 1354.32,
+            "text": " so I will say h1  I used element selector here  I will do format document  by using element selector I will make the color red  color red"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1354.32,
+            "end": 1363.6,
+            "text": " and obviously you guessed it right  the color here  I want to preview colors.html  yes it's done  let's learn about colors here"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1363.6,
+            "end": 1370.72,
+            "text": " you can see that it came from red  no surprises there  now can I make it orange  yes I can  orange"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1370.72,
+            "end": 1380.0,
+            "text": " and you can see here its color is orange  what are the color keywords  which can be used  now see these are color keywords  it is possible that the color in your mind"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1380.0,
+            "end": 1390.12,
+            "text": " is not a color keyword in CSS  and I am stuck in these things  that there is a color in my mind  like light blue  I wrote light blue here"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1390.12,
+            "end": 1398.2,
+            "text": " so I will show you how to find out  now see here  if I write dark yellow  I wrote dark yellow here  and you can see it's not coming"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1398.2,
+            "end": 1407.6399999999999,
+            "text": " how will I know that it's not dark yellow  because if I show you here  so dark red is there  yes it's dark red  is it dark grey"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1407.6399999999999,
+            "end": 1412.64,
+            "text": " dark grey is there  dark green is there  so why is dark yellow not there  what is this injustice  so what happens"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1412.64,
+            "end": 1420.88,
+            "text": " that there are some color keywords in CSS  and what I will do here  I will show you a code pen  that code pen you don't have to write  by"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1420.88,
+            "end": 1427.24,
+            "text": " I mean this is very much  I will say  it's a common sense thing  that you don't have to write  but here you can see"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1427.24,
+            "end": 1433.0,
+            "text": " Alice blue  antique white  aqua aquamarine  azure blue  and all these colors"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1433.0,
+            "end": 1440.52,
+            "text": " whatever colors are there in CSS  it has a comprehensive list  so let's do one thing  you guys  I am putting it here just to see you"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1440.52,
+            "end": 1445.44,
+            "text": " it's not like you have to write it  don't think that  I am sitting to remember it  no  I know you are smart"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1445.44,
+            "end": 1453.48,
+            "text": " and you won't do that  so these are the color keywords we have  so one is the easiest for us  I will put a good color of it  dark red"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1453.48,
+            "end": 1459.0,
+            "text": " one is the easiest way for us  here  I close this too  I close this too  I close this too"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1459.0,
+            "end": 1464.96,
+            "text": " I close this too  use color keyword here  but sometimes what happens  see colors  there are millions of colors"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1464.96,
+            "end": 1474.6399999999999,
+            "text": " okay  if you have to give a particular color to someone  it means it gave you a hex color code  now what is hex color code  hex color code is a way to represent a code"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1474.6399999999999,
+            "end": 1480.72,
+            "text": " now I will tell you three ways  which are very commonly used  to show color  okay  so I do one thing"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1480.72,
+            "end": 1490.8799999999999,
+            "text": " I write a paragraph here  I will write  color can be represented in  and here first of all  I will make an ordered list"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1490.8799999999999,
+            "end": 1499.36,
+            "text": " I will put a list item in the OL  and I will write here  color codes  okay  sorry color keywords"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1499.36,
+            "end": 1507.8,
+            "text": " and here hex color codes  one li  one list item is mine  hex color code  and after this I will put one more li here"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1507.8,
+            "end": 1515.32,
+            "text": " RGB  then I will put one more li  RGBA  and then I will put one more li  that is HSLU"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1515.32,
+            "end": 1521.88,
+            "text": " saturation and lightness  okay  so here you see  what is the first way  so if I have to do it through color keywords"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1521.88,
+            "end": 1529.68,
+            "text": " then I have shown you how to do it  now I will show you  how you can use this color  by giving a hex color  if I write color here"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1529.68,
+            "end": 1538.0800000000002,
+            "text": " I write hashtag here  and I will write FFAB  in fact I will not choose random color  I will go to hex color code  okay"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1538.0800000000002,
+            "end": 1544.68,
+            "text": " and here you see  many color hex code  you can give any color  a hex color code  and"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1544.68,
+            "end": 1551.0800000000002,
+            "text": " a way to generate a hex color code  see here it is shown  and if you  suppose you have to take this color  suppose I like this color"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1551.0800000000002,
+            "end": 1556.4,
+            "text": " wow  what a nice color  suppose this thing is sitting in my mind  so what I will do  I will copy this hex color code"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1556.4,
+            "end": 1562.88,
+            "text": " okay  and it will generate exactly the same color  so after hash I will write this  and you see here  this green color is here"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1562.88,
+            "end": 1570.44,
+            "text": " so hex color  is a way to represent color  which uses hex values  okay  now a particular hex color"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1570.44,
+            "end": 1578.68,
+            "text": " will also have RGB equivalent  if it is a very common color  like red  then its color keyword will also be equivalent  so if you want to use any color"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1578.68,
+            "end": 1585.12,
+            "text": " then you will be given its code  now that code can be given to you in RGB  that code can be given to you  a color code  through color keyword"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1585.12,
+            "end": 1589.44,
+            "text": " like red  blue  or it can be given to you  in RGB  RGBA"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1589.44,
+            "end": 1596.48,
+            "text": " or HSL  so this is hex color code  now I will tell you  how RGB is used  if you want to use RGB"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1596.48,
+            "end": 1601.6,
+            "text": " then you will write  color  and RGB  and here the value of red  from 0 to 255"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1601.6,
+            "end": 1609.1200000000001,
+            "text": " suppose I write 23  value of green from 0 to 255  and here  value of blue from 0 to 255  and see this color is made"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1609.1200000000001,
+            "end": 1618.52,
+            "text": " now if you hover over it  then you will see this  and you can generate any color through it  see the values of RGB are also changing  so if you want to generate any color"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1618.52,
+            "end": 1624.32,
+            "text": " then you can do it  so from RGB values  that means  if red is this much  green is this much"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1624.32,
+            "end": 1629.36,
+            "text": " blue is this much  then this color is made  okay  if you want to make white  then 255, 255, 255"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1629.36,
+            "end": 1632.72,
+            "text": " if you put all the colors  then it will become white  if you want to make black  then don't put anything  dark"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1632.72,
+            "end": 1636.24,
+            "text": " 0, 0, 0  okay  and different colors are made  from the middle values  okay"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1636.24,
+            "end": 1641.4399999999998,
+            "text": " so a particular color is made  from RGB  you can use it  okay  this is one way"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1641.4399999999998,
+            "end": 1651.2,
+            "text": " to represent colors  another way to represent colors  is RGBA  and RGB is same in RGB  RGBA is same like RGB"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1651.2,
+            "end": 1658.76,
+            "text": " only one thing changes  that is alpha  and what is this alpha value  it varies from 0 to 1  if I make it 0.5"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1658.76,
+            "end": 1665.52,
+            "text": " I will show you  and I do it like this  so I can do it like this  from 0 to 1  you can see the value is changing"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1665.52,
+            "end": 1670.2,
+            "text": " okay  and by default it is 1  if I make it 1  then there is no need to write  but you see"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1670.2,
+            "end": 1674.64,
+            "text": " if I make alpha this much  okay  so what will happen  what is alpha basically  its opacity"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1674.64,
+            "end": 1679.0400000000002,
+            "text": " okay  I will reduce the opacity  if I reduce it completely  then this color  will look like this"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1679.0400000000002,
+            "end": 1682.44,
+            "text": " see  it is light  it is very light  okay  after this"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1682.44,
+            "end": 1689.1200000000001,
+            "text": " you have an HSL equivalent  of a color  and if I have to tell you  what is the most used  see"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1689.1200000000001,
+            "end": 1694.44,
+            "text": " most of the time  these color keywords are used  after that  hex color is used the most  because those people"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1694.44,
+            "end": 1701.92,
+            "text": " who make designs  they mostly use  hex color codes in their designs  and when they use  hex color codes"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1701.92,
+            "end": 1709.2,
+            "text": " then developers like us  to bring exact color  in our design  through HTML and CSS  we have to use"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1709.2,
+            "end": 1714.88,
+            "text": " their hex color codes  okay  so here we  have to use  the value we have got"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1714.88,
+            "end": 1719.28,
+            "text": " if we are told  that it is RGB color  okay  give us the values  we will apply"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1719.28,
+            "end": 1724.04,
+            "text": " if your boss told you  that RGB values  is to use through red color  okay  we will do this"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1724.04,
+            "end": 1729.44,
+            "text": " exact same color will be made  wherever you make  if any developer  has used a particular color  in android app"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1729.44,
+            "end": 1734.64,
+            "text": " that same developer  if you want to use  the same color in your website  then bring the exact color code  or"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1734.64,
+            "end": 1739.64,
+            "text": " hex color code  or bring the values  of RGB  or bring the values of RGBA  sometimes"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1739.64,
+            "end": 1743.64,
+            "text": " HSL is also used  let me tell you  it is used less  I personally  do not use HSL"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1743.64,
+            "end": 1748.68,
+            "text": " in my websites  okay  but HSL  is used  now I would like to tell you"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1748.68,
+            "end": 1753.56,
+            "text": " in HSL  H is Hue  which represents  the type of color  S means"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1753.56,
+            "end": 1758.48,
+            "text": " that  how much intensity  purity is there  and L  determines the lightness"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1758.48,
+            "end": 1762.4,
+            "text": " now you see  HSL color can be made  like this  so I will copy  the color"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1762.4,
+            "end": 1765.76,
+            "text": " and show you  here  personally  I am not a big fan  of HSL"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1765.76,
+            "end": 1768.96,
+            "text": " to be honest  but sometimes  I am given  colors  so I have to apply"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1768.96,
+            "end": 1773.32,
+            "text": " so this color  is made from this HSL  okay  and you obviously  here by hovering"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1773.32,
+            "end": 1777.32,
+            "text": " if you change it  then it will change  in HSL  see this  if I want to change"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1777.32,
+            "end": 1781.56,
+            "text": " here see  you can also give  this alpha  so HSL  A is also there"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1781.56,
+            "end": 1784.92,
+            "text": " but  again  it is not used so much  but you should know  that HSL"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1784.92,
+            "end": 1788.48,
+            "text": " A is also there  you can also give  alpha value in it  something like this  okay"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1788.48,
+            "end": 1792.84,
+            "text": " or I can also add  HSL A  but again  we will keep alpha  100"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1792.84,
+            "end": 1796.64,
+            "text": " and use HSL  for now  because  if you are making  your website"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1796.64,
+            "end": 1800.92,
+            "text": " then you have  full creative control  over which color  you are using  okay"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1800.92,
+            "end": 1806.68,
+            "text": " so this was about color  if you want to add  color in background  then we use the same thing  in background color"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1806.68,
+            "end": 1810.8,
+            "text": " and exactly  the way I gave color  you can give it that way  for example  if you want to give"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1810.8,
+            "end": 1815.52,
+            "text": " background color  then you can give  RGB value  you can give HSL  you can give RGBA"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1815.52,
+            "end": 1821.3200000000002,
+            "text": " you can give color keywords  you can give hex codes  sky is the limit  it's your choice  okay"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1821.3200000000002,
+            "end": 1825.2,
+            "text": " here  your choice  okay  you will say  it's my choice"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1825.2,
+            "end": 1828.88,
+            "text": " I can use any color  if you are making  your website  obviously  if you are making"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1828.88,
+            "end": 1832.2,
+            "text": " someone else's  then he will say  he will say  it's my choice  you are a developer"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1832.2,
+            "end": 1837.0800000000002,
+            "text": " make a website quietly  okay  use the color  as I am saying  now border color"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1837.0800000000002,
+            "end": 1843.1200000000001,
+            "text": " and your  text  decoration color  the color  wherever it is in the whole CSS"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1843.1200000000001,
+            "end": 1848.88,
+            "text": " okay  border color  then after that  there are many other colors  where we will read colors"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1848.88,
+            "end": 1854.72,
+            "text": " there we can use  this kind of values  so that was about  colors in CSS  now there are many things"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1854.72,
+            "end": 1860.8400000000001,
+            "text": " like how to read  HSL  exactly how to tweak  these values  how to make a particular color"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1860.8400000000001,
+            "end": 1867.2,
+            "text": " so man  those things will go  towards design lessons  you guys here  what should be your purpose"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1867.2,
+            "end": 1871.0400000000002,
+            "text": " that how to make  a good website  so I hope  in this long video  I explained you"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1871.0400000000002,
+            "end": 1875.0800000000002,
+            "text": " font and colors  because many people  were saying  that videos are getting small  so I thought"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1875.0800000000002,
+            "end": 1882.08,
+            "text": " a long video  so I have tried to tell you  fonts and colors  in today's video  I am enjoying"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1882.08,
+            "end": 1887.1999999999998,
+            "text": " telling in the comment section  in this course  and people  are not bookmarking the playlist  and are not liking the video"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1887.1999999999998,
+            "end": 1893.76,
+            "text": " which is very wrong  according to me  you guys access this playlist  click here and bookmark  click here and save"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1893.76,
+            "end": 1900.4399999999998,
+            "text": " like this video  share it with your friends  and in the name of  your village and your uncle  prepare to meet me"
+        },
+        {
+            "number": "19",
+            "title": "CSS Fonts, Text & Color Properties",
+            "start": 1900.4399999999998,
+            "end": 1905.76,
+            "text": " in the next video  thank you so much guys  for watching this video  and I will see you  next time"
+        }
+    ],
+    "text": " In today's video, we will see how fonts and color CSS work. In this video, I will also tell you how you can use external fonts in your website. We will know how font sizes can be changed, what is the concept of fallback font. And I will tell you all this with examples. Let's go to the computer screen. Let's roll the intro. So guys, I will say again that today's video is going to be a very important video. Because in this video, I will tell you about fonts and colors. And any website you make in your life, fonts and colors will definitely be visible to you. So as always, I will click on shift right here. In fact, I will make a new folder by clicking here. In which I will make a folder named video 19. I will open it by clicking on shift right. And as soon as I open it, you can see here. I have made a file named index.html here. And I am going to write internal CSS here. Because I don't want to make a style sheet. So that everything of you is on the same page. So first of all, I will make a div here. And I will write h1 in this div. And I will write fonts in h1. And I will put a paragraph in it. This is a video on fonts. Now I want to tell you that if you have not accessed the playlist yet. Then click here and bookmark. Because you can do it by clicking here. Or click here and save it. And along with that, the source code is being updated. You can see this too. I have updated the source code of all the videos. So I do the source code update from time to time. If I preview it and show it to you. So no surprises, here fonts and this is a video on fonts. But the interesting thing is that you can change the font. Now many people will be beginners here. And they don't know what font is. This is a different font. And this is a different font. And this is a different font. That means if you see the text appearing different. Then it looks different because of the font. So if we want to change the font of any element. Then we use font family. So I can easily put a style tag here. That paragraph, make its font family. What to do? So now see a lot of options are automatically giving me VS Code. Suppose I want to see COGUI and along with that Tahoma. And so many fonts are available here. These are comma separated values. Which will try to put the first font here. If this font is not available in your system. Then it will try to put this font. And so on. So these are called fallback fonts. That is, the main font is COGUI. And Tahoma, Geneva, Vardana, San Serif. These are fallback fonts. So you see here. As soon as I show you here. So its font has changed a little. If I want to change the font family of my H1. Now suppose I want Times New Roman to come here. So I will put Times New Roman in the font family. And I think by default it is Times New Roman. So there is no difference here. But let's try something else. And as soon as I write font family here. I will write like this. So let's do Lucid Ascent. And this is a set of font family. So see here that I have changed the font. This font looks a little better now. Compared to the previous font. So you can change the font from the font family. Now whenever we put font family. So it is said that whenever you are putting font family. So put at least one generic font family. So that if the user's computer does not have that font. Then there is no problem. In this case, it is suggested that like Times New Roman. Like COUI, like Sans Serif. It is necessary to put a font family. Whenever you are making websites in your fonts. So this way you can give fonts here. Now we have a lot of properties related to fonts. Like if I want in paragraph. That the font style. I want to make it italic. So I can make bold italic. My font style. I made font style italic here. So I can do it this way. In font style we have one italic. And one is normal and one is oblique. Bold is not there. For bold we have to use font weight. So if I make it oblique here. So it will look like this. And with that if I can't even underline it. I will have to use text decoration for underline. So these values are here. Now here it is usually used for italic. So if you want to do italic. You will use font style. As soon as you write font here. See a lot of properties related to fonts. And I want to tell you font weight here. These are all values. Bold, bolder, lighter. And you can also put values like this. So see it has become a little thick. So whenever you want to bold. So you can use this. So you can do oblique. You can do italic with font style. You can do normal. And if you want to underline here. So you can use text decoration. So text decoration is a property. With which you can underline. So I want to tell you this. And you can also do overline. So the way you see overline. Line comes up. But all these properties. I am telling you honestly. It is not that much useful. As much as you will get italic. And then font weight will come. So here is a code pen. I put the link of which here. Before I forget. I put the link of this here. Code pen. And this code pen link will tell you. Which font families. How it looks. So see here. Serif looks like this. Senserif looks like this. Monospace looks like this. And cursive looks like this. And you can see here. This code pen is showing a lot of things from here. How your families look like. Okay. Now what happens. Usually when you do web development. So you will want. That you use some special fonts. Like I use Ballu Bhai. Ballu Bhai is a font. Which I like a lot. Yes Ballu Bhai and Ballu Behna. These are the names of both the fonts. I will show you now. And in this way you use Google Fonts. So I will show you how to use Google Fonts. So if you see here. I will write Google Fonts in the new tab. And as soon as I come to Google Fonts. I can actually use a font. If I write here Ballu Bhai. Ballu Bhai. I hope I am spelling it correct. Ballu Bhai. There is also Ballu Da. There is also Ballu Behna. And here I am not getting Ballu Bhai font. Why is this Arabic font showing me. I will come here to home. And I will write here. Hey I am good. And here you see. Ballu Bhai, Ballu Behna, Ballu Bhai 2. All these fonts are visible to me. Now if I click here. So you see here. Ballu Bhai 2 will look like this in English. Now suppose I want to use this font. I reset it. If I want to use it. So what I will do simply. I will click here. Suppose I don't want medium 500. I want my font to look like this. Or I want it to look normal. So I will click on plus. And it will give me a font here. Now there are two ways to include fonts. Either you do it through link. Or you do it through import. If you are doing it through import. Then you put it in style tag. Import statement. Which I will show you now. And I hope I am not going fast. I am just trying that I am not repetitive. And I can take your time. And teach you as much as possible. So here you can see. I did import URL like this. Now if I want here. I will comment this. And I will write here font family. And in fact what I will do. I will copy from here. Because here font family is given. How to apply. So it becomes a little convenient. Copy and paste. And here see. Ballu Bhai has given sans serif. By chance you don't have. Ballu Bhai 2 font. So you got sans serif. Now you can see here. This font looks exactly like this. Hey I am good as it was written. It is seen here. And I will remove italic from it. And I also remove font weight. Because these two things. I just told you to teach. You want exactly. Font to look like you. As you have downloaded. And I can see it the same. Because I have this Ballu Bhai 2. It is downloaded the same way. From here. You can see here. That I got this font. Now if I want. To use this link. So I actually. By copying this link. Then I will remove this import from here. And now I will put it. In my head tag. I do the right click format document. So that unnecessary spaces go. And you can see here. That I have through link. This font. Included in my web page. So in my web page. Through html. I can include fonts. And if I want. So I can include through style tag. Font. As you have seen here. And you see here. That my Ballu Bhai. It is intact. My Ballu Bhai font. I can see here. Which is a good thing. You can use many fonts like this. Poppins. Which I use a lot. To be honest. Poppins is one of my favorite fonts. So I want to include Poppins. So it is always recommended. That you. All the fonts you want to include. You include them all at once. Like I want this Poppins. I included this. So I. This link and imports. I will bring them all at once. See here. In one request. I will bring both the fonts. So it is always recommended. That you. I will remove this link tag from here. Because I am putting imports now. You have to put only one of these. So see here. From the same import statement. Ballu Bhai is also coming. And from the same import statement. Poppins font is also coming here. So one arrow two targets. You can also do one arrow fifty targets. But I don't think. You will need fifty fonts in a web page. Now see here. If I want. That my heading is Poppins. So what I will do simply. Like it is written here. Poppins and Sarif. So I will make the Poppins font here first. And Poppins is available now. So what will happen. That Poppins will be applied. So see my H1. Poppins is applied to it. You can see here. I use Poppins font a lot. It is one of my favorite fonts. But you go to Google fonts. There are a lot of fonts. Explore them. You will enjoy. I can guarantee you this. So this was about fonts in CSS. And some more properties of fonts. I want to tell you about. Another property is font size. Like you can change the font size. If I talk about font size. So I can use large, large and medium here. X small, double X large. But I will recommend you pixel units. Then we will talk about more units. So if I do 20 pixels here. So you can see here. That font will be a little big. Now I want to show you one thing. If I don't put any font size here. That is, I have not put anything. So by default. One size will be of H1 here. One size will be of paragraph here. And this styling will be. Default browser styling. And to see this. I will disappear my face. Now look here. H1 is here. I will select this. I will go to computed. And look here. Font size 32 pixels. So I do one thing here. I reset it. Just in case. No value is damaged through zoom. Font size if I write here. Look 32 pixels of H1. And the paragraph. What is its default font size? 16 pixels. You can see here. 16 pixels is the default font size. So if I want. My font size should be a little bigger. 20 pixels. So I will make it 20 pixels. And now you can see here. 20 pixels font size. You can see here. This is a video on fonts. Now you can select it here. You can increase the font through arrow keys. I am using up arrow key. To increase the font. Okay. And I can use down arrow key. To make my font. To make it smaller. Okay. So here you see. I can make my font smaller. I kept pressing up arrow key. I kept pressing down arrow key. So you can adjust here. CSS. Suppose I want. Suppose I want 49 pixels. And I want. Let's make font weight. Let's make it 900. No, 900 is a little more. Let's make it 700. Let's make it 600. Yes, 600 is fine. Then let's say. I want to set its color here. Let's say red. And if I like these styles. Then I will copy them. Something like this. Try to understand what I am trying to say. Now if I reload it. Then all these styles will go. Because whatever styles you put from here. They are temporary. But if you want. To put these styles permanently. So whatever element you put. Like I put on paragraph. Now I can paste these styles here. And they are forever here. You can see. I will reload it. It is still here. Because I have pasted it in my code. But for now I will not use these styles. So I hope you understood. How font size works. Now after this. There is a concept of line height. And suppose I do line height. Let's say 4. Okay. I made line height 4. Of paragraph. And for that I have to put a little content. Let's say I write another paragraph. And here I write lorem 45. And why I wrote lorem 45. You will tell me in the comment section. Why I wrote 45. Or why I write 23. So you see what will happen with line height. Space will come here. And here space has come. Because here line height is 4. Now if I reduce it. As I reduce it. As if I made it 1.4. Or 1.8. So you understood. That this spacing. This is line height. Basically controls. If you want. That your space of lines increases. Increase the line height. If I want to know. What will be the default value of line height. Then I will remove the line height from here. And I will go to computed. And search for line height. Line height. Now here I am not getting line height. In this element. So in this element. No line height compute. I guess it didn't happen. So I will do one thing. I will search on google. Default line height. Okay. So the default line height. Is about 110 to 120 percent. So if you want. To change the line height. So you do more than 1.2. If you want to do more. Or you reduce it from 1.2. And line height. Will help you increase. Its spacing. After this. There is one more property. Letter spacing. Okay. And I am telling. That it is not used so much. Okay. And I will increase the letter spacing. So see what is happening here. It increases the spacing of letters. Basically. What she is saying. So if you ever. Need to increase the letter spacing. So you can use it. Letter spacing. Okay. So I personally. I don't use it so much. I make my websites. But these are all such things. You should know. Through this video. I want you to know. All those things. Which you guys. Maybe ever. If you want to do. Let us say you. First word. First letter. You want to capitalize. So you should know. Basically how to do it. There are some things. You guys don't know. If you have to do it. Then it will be a lot of trouble. So I show you here. That if you want to capitalize. Any first letter. Or then. You have to do. So if you want. To capitalize. Any first letter. Or then. Any word. Like suppose. H1. Okay. Or then do one thing. I put H2 here. Okay. And I write here. About fonts. Now I will write H2 here. I hope you guys can see. I zoom in a little. If I write H2 here. Suppose I write here. Text transform. And suppose I write here. Capitalize. So I see here. About fonts. If I have made. F to about. Fonts. If I have made it small. So now see here. About fonts. A will be capitalized. First letter. Okay. Now if I. In text transform. Write here. By putting colon. Lower case. So you see here. As soon as I did lower case. It will be full lower case. If I do upper case. It will be upper case. Okay. Upper case. And it comes into work. You know. It is not such a thing. That it will never come into work. Everything should not be said. That it will not come into work. It is actually. Coming into your work. Okay. So this property. I hope. You guys. Tie it in your tool belt. Then it happens here. I have seen. Text decoration. Underline text decoration. It will be underlined. But I tell you. About text decoration color. Text decoration color. Okay. So here you can see. Text decoration color. If you do aqua. So see here. Underlined with aqua color. So text decoration color. You can also change. And this is very helpful. When you make navigation bars. And in navigation bars. It happens many times. When you hover on them. Then the color changes. Or the way the line. Appears. So all those things. You can do through CSS. So I hope. That you are understanding. Things. In the comment section. Sigma. If you are understanding. Then very quickly. About two properties. I tell you. Text decoration style. Like suppose. If I add here. On this element. Text decoration style. And I add it here. So that. You have the code for your reference. Text decoration style. And here. If I want. Dotted style. Dotted here. So it will be dotted. Where is the preview. Here it is. So see it is dotted. If you can't see. So I hope. It will be visible now. So if I want. Dotted. So my underlining. Will be dotted. So it will be dotted. So my underlining. Will be dotted. There are many other values. Like you see. Here it is dotted. This is double. This is inherit. Inherit means. Which is inherited from its parent. If I do solid. Then it will be like this. If I do wavy. Then it will be like this. Okay. So all these things. If you want dash. If you want dotted. Then you can do it. Okay. You see. Dash is like this. Dotted is like this. Then wavy is like this. Okay. But I will tell. From my personal experience. I have done so much web development. In life. Maybe sometime. I have done so much web development. But you should know. I will say again. You should know. All these things are like this. If you don't know. Then it will be a problem. Sometime you. Someone told you. I want dash. I want dotted. So you should know. How to make. So these are some properties. Which you should know. There is also thickness. I will tell you the thickness. And there are many other things. But you see. If you want to do thickness. So you will write text deco. So see. It will suggest thickness. You never feel like typing this. Text decoration color. Or type any property. And you will get thickness. So you will get thickness. So you will get thickness. Or you don't feel like typing any property. So what you do. Write T. Write D. And write CO. I will show you. Like if I don't feel like typing this. And I want. I want to get suggested quickly. So I will write T. DE. And TH. I will show you. Means. A little bit of this. A little bit of this. And a little bit of this. And I will get suggested. Means I want text decoration thickness. See this is important. Your productivity will increase. Text. Decoration DE. And TH thickness. See it came. And it is showing. Why it is being suggested. Because you took TE from here. DE from here. TH from here. If you hit enter. It will come straight. And after this. You simply use arrow key. What to do here. Or if you just colon like this. Then see. Here it is showing you. Now what do you want. How much thickness do you want. So you can adjust the value of thickness. So you can adjust the value of thickness. Okay. Assume I do something. 45 pixels. I hope I didn't do too much. I guess I have done too much. So I will remove it by not doing dotted. I will keep it solid. I will keep it solid. And you see here. I have made it a little too thick. See. I have to reduce its value a little. So I will keep it solid. And you see here. I have made it a little too thick. See. I have to reduce its value a little. And see. I will reduce its value. So it has become a little less. I think 7 pixels is more than enough. 7 pixels is way more than enough. So let's do 7 pixels. And see it got thick. So sometimes you have to make it thick. What to make thick. If you want to make your text decoration thicker. So you can do something like this. So you guys use text decoration thickness. To make it thick. Okay. After this. I would also like to tell you about a text-indent property. The text-indent property. Assume I am 45 pixels. I have made it a little too thick. So I will keep it solid. And you see here. So you can add an indent. And I would like to show you here. That my h2. If I reduce the value of the text-indent. I am doing it with the arrow key. So see. You can do it like this. Then after this. To make blogs. Text overflow is going to be used a lot. Text overflow property. Means. What do you want. If your text. Is overflowing from your box. Then what should happen. So you can see. I have made it a little thicker. So it has become a little less. So you can see. So you can see. So you can see. So you can see. So you can see. So you can see. So you can see. So you can see. So you can see. What will happen if I make a ellipse. So what will happen? What is the difference between ellipses and clips? So what will happen? I will tell you. If I increase the width. So it will be like this. So I will tell you. If I increase the width. So it will be like this. And. Let's do the same. For paragraph. In paragraph. I think. We can understand this thing more clearly. So here I will give a class. And in the class. I will do lorem. I will put a style by doing .lorem. And I will put a style by doing .lorem. Right. And I will show you the same thing. And I will show you the same thing. One is text overflow. so first of all I will give border 2px solid red and after this I will give width 45px and let's see how it looks, so it looks like this now what I will say to this paragraph that if there is text overflow in it then do ellipsis now here one more important thing is that you have to hide the overflow which means that if it is overflowing from the box what do you want your element you want scroll, you want hidden so you see I have hidden the overflow so this is happening with ellipsis and if I clip it, I will show you by changing its value to clip so here it is completely clipped, it is hidden so there are other properties like this I would like to tell you another property like this and that is word break so I will do one thing, I will make it 145 I will do something like this to both of them and here I will write word break and if I do break all in word break then you see here that if I don't do break all here then what is happening so see here dollar went down if I do break all then what will happen that here it will break the word it has done DOL and OR here so if you want your words to break then you can use this property word break break all then after this there is a text align property let's say I want to center it so I will put text align center here text align center and now see it is centered if I reload it then it will go for sure so I will put it in h2 and I will say text align center so here it is automatically suggesting me and I am taking it as my property which is very important for me if I am coding so you see here about font is centered I hope you understood this thing so these were all text properties now here text properties are very important because if you want to make good websites then you should know everything about text only then you will be able to control your text so these were some text properties I will give you a link in the description where you will get to learn additionally about all these things and all this I have read in this video after that things will be very intuitive for you so what I will do is I will move towards colors and I will tell you how colors work so let's do one thing let's make one more html file with the name of colors.html because we have spread a lot of mess there while understanding fonts because obviously this is not a good website I have made this to teach you concepts and we will make good websites also so let's talk about colors so here I will put its heading colors and I will put its heading fonts I know it's not looking good so I can give it a little beauty by putting its title now after this I will put style here oops I don't know why I put capital S instead of style and what I will do here I will write h1 let's learn learn about colors now suppose I want to change the color of h1 so I will say h1 I used element selector here I will do format document by using element selector I will make the color red color red and obviously you guessed it right the color here I want to preview colors.html yes it's done let's learn about colors here you can see that it came from red no surprises there now can I make it orange yes I can orange and you can see here its color is orange what are the color keywords which can be used now see these are color keywords it is possible that the color in your mind is not a color keyword in CSS and I am stuck in these things that there is a color in my mind like light blue I wrote light blue here so I will show you how to find out now see here if I write dark yellow I wrote dark yellow here and you can see it's not coming how will I know that it's not dark yellow because if I show you here so dark red is there yes it's dark red is it dark grey dark grey is there dark green is there so why is dark yellow not there what is this injustice so what happens that there are some color keywords in CSS and what I will do here I will show you a code pen that code pen you don't have to write by I mean this is very much I will say it's a common sense thing that you don't have to write but here you can see Alice blue antique white aqua aquamarine azure blue and all these colors whatever colors are there in CSS it has a comprehensive list so let's do one thing you guys I am putting it here just to see you it's not like you have to write it don't think that I am sitting to remember it no I know you are smart and you won't do that so these are the color keywords we have so one is the easiest for us I will put a good color of it dark red one is the easiest way for us here I close this too I close this too I close this too I close this too use color keyword here but sometimes what happens see colors there are millions of colors okay if you have to give a particular color to someone it means it gave you a hex color code now what is hex color code hex color code is a way to represent a code now I will tell you three ways which are very commonly used to show color okay so I do one thing I write a paragraph here I will write color can be represented in and here first of all I will make an ordered list I will put a list item in the OL and I will write here color codes okay sorry color keywords and here hex color codes one li one list item is mine hex color code and after this I will put one more li here RGB then I will put one more li RGBA and then I will put one more li that is HSLU saturation and lightness okay so here you see what is the first way so if I have to do it through color keywords then I have shown you how to do it now I will show you how you can use this color by giving a hex color if I write color here I write hashtag here and I will write FFAB in fact I will not choose random color I will go to hex color code okay and here you see many color hex code you can give any color a hex color code and a way to generate a hex color code see here it is shown and if you suppose you have to take this color suppose I like this color wow what a nice color suppose this thing is sitting in my mind so what I will do I will copy this hex color code okay and it will generate exactly the same color so after hash I will write this and you see here this green color is here so hex color is a way to represent color which uses hex values okay now a particular hex color will also have RGB equivalent if it is a very common color like red then its color keyword will also be equivalent so if you want to use any color then you will be given its code now that code can be given to you in RGB that code can be given to you a color code through color keyword like red blue or it can be given to you in RGB RGBA or HSL so this is hex color code now I will tell you how RGB is used if you want to use RGB then you will write color and RGB and here the value of red from 0 to 255 suppose I write 23 value of green from 0 to 255 and here value of blue from 0 to 255 and see this color is made now if you hover over it then you will see this and you can generate any color through it see the values of RGB are also changing so if you want to generate any color then you can do it so from RGB values that means if red is this much green is this much blue is this much then this color is made okay if you want to make white then 255, 255, 255 if you put all the colors then it will become white if you want to make black then don't put anything dark 0, 0, 0 okay and different colors are made from the middle values okay so a particular color is made from RGB you can use it okay this is one way to represent colors another way to represent colors is RGBA and RGB is same in RGB RGBA is same like RGB only one thing changes that is alpha and what is this alpha value it varies from 0 to 1 if I make it 0.5 I will show you and I do it like this so I can do it like this from 0 to 1 you can see the value is changing okay and by default it is 1 if I make it 1 then there is no need to write but you see if I make alpha this much okay so what will happen what is alpha basically its opacity okay I will reduce the opacity if I reduce it completely then this color will look like this see it is light it is very light okay after this you have an HSL equivalent of a color and if I have to tell you what is the most used see most of the time these color keywords are used after that hex color is used the most because those people who make designs they mostly use hex color codes in their designs and when they use hex color codes then developers like us to bring exact color in our design through HTML and CSS we have to use their hex color codes okay so here we have to use the value we have got if we are told that it is RGB color okay give us the values we will apply if your boss told you that RGB values is to use through red color okay we will do this exact same color will be made wherever you make if any developer has used a particular color in android app that same developer if you want to use the same color in your website then bring the exact color code or hex color code or bring the values of RGB or bring the values of RGBA sometimes HSL is also used let me tell you it is used less I personally do not use HSL in my websites okay but HSL is used now I would like to tell you in HSL H is Hue which represents the type of color S means that how much intensity purity is there and L determines the lightness now you see HSL color can be made like this so I will copy the color and show you here personally I am not a big fan of HSL to be honest but sometimes I am given colors so I have to apply so this color is made from this HSL okay and you obviously here by hovering if you change it then it will change in HSL see this if I want to change here see you can also give this alpha so HSL A is also there but again it is not used so much but you should know that HSL A is also there you can also give alpha value in it something like this okay or I can also add HSL A but again we will keep alpha 100 and use HSL for now because if you are making your website then you have full creative control over which color you are using okay so this was about color if you want to add color in background then we use the same thing in background color and exactly the way I gave color you can give it that way for example if you want to give background color then you can give RGB value you can give HSL you can give RGBA you can give color keywords you can give hex codes sky is the limit it's your choice okay here your choice okay you will say it's my choice I can use any color if you are making your website obviously if you are making someone else's then he will say he will say it's my choice you are a developer make a website quietly okay use the color as I am saying now border color and your text decoration color the color wherever it is in the whole CSS okay border color then after that there are many other colors where we will read colors there we can use this kind of values so that was about colors in CSS now there are many things like how to read HSL exactly how to tweak these values how to make a particular color so man those things will go towards design lessons you guys here what should be your purpose that how to make a good website so I hope in this long video I explained you font and colors because many people were saying that videos are getting small so I thought a long video so I have tried to tell you fonts and colors in today's video I am enjoying telling in the comment section in this course and people are not bookmarking the playlist and are not liking the video which is very wrong according to me you guys access this playlist click here and bookmark click here and save like this video share it with your friends and in the name of your village and your uncle prepare to meet me in the next video thank you so much guys for watching this video and I will see you next time"
+}

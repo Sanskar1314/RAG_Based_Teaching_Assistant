@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Course Assistant</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <style>
+        :root {
+            --primary-color: #4F46E5;
+            --primary-hover: #4338CA;
+            --secondary-color: #10B981;
+            --text-color: #1F2937;
+            --light-text: #6B7280;
+            --background: #F9FAFB;
+            --card-bg: #FFFFFF;
+            --border-color: #E5E7EB;
+            --error-color: #EF4444;
+            --error-bg: #FEF2F2;
+            --success-color: #10B981;
+            --success-bg: #ECFDF5;
+            --border-radius: 12px;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 900px;
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-lg);
+            padding: 2.5rem;
+            margin: 0 auto;
+            transition: transform 0.3s ease;
+        }
+        
+        .container:hover {
+            transform: translateY(-5px);
+        }
+        
+        .header {
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+        
+        h1 {
+            color: var(--text-color);
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.025em;
+        }
+        
+        .subtitle {
+            color: var(--light-text);
+            font-size: 1.125rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--text-color);
+            font-size: 1rem;
+        }
+        
+        textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            height: 120px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            resize: vertical;
+            background-color: var(--card-bg);
+        }
+        
+        textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+        }
+        
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        button:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        button:disabled {
+            background-color: var(--border-color);
+            color: var(--light-text);
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .response-container {
+            margin-top: 2.5rem;
+        }
+        
+        .response {
+            padding: 1.5rem;
+            background-color: #F3F4F6;
+            border-radius: var(--border-radius);
+            white-space: pre-line;
+            border-left: 4px solid var(--primary-color);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+        
+        .loading {
+            text-align: center;
+            display: none;
+            margin: 2rem 0;
+        }
+        
+        .spinner {
+            border: 3px solid rgba(79, 70, 229, 0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border-left-color: var(--primary-color);
+            animation: spin 1s linear infinite;
+            display: inline-block;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .error-message {
+            background-color: var(--error-bg);
+            border-left: 4px solid var(--error-color);
+            padding: 1.25rem;
+            margin-bottom: 1.5rem;
+            border-radius: var(--border-radius);
+        }
+        
+        .error-message h3 {
+            margin-top: 0;
+            color: var(--error-color);
+            font-weight: 600;
+            font-size: 1.125rem;
+        }
+        
+        .error-message ul {
+            margin-bottom: 0;
+            padding-left: 1.5rem;
+        }
+        .setup-instructions {
+            margin-top: 1.5rem;
+            padding: 1.25rem;
+            background-color: var(--success-bg);
+            border-left: 4px solid var(--secondary-color);
+            border-radius: var(--border-radius);
+        }
+        .setup-instructions h3 {
+            margin-top: 0;
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-size: 1.125rem;
+            margin-bottom: 0.75rem;
+        }
+        .setup-instructions pre {
+            background-color: #F3F4F6;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            overflow-x: auto;
+            font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem;
+            }
+            
+            h1 {
+                font-size: 1.75rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Web Development Course Assistant</h1>
+            <p class="subtitle">Ask questions about web development concepts, techniques, and best practices</p>
+        </div>
+        
+        {% if not setup_status.ready %}
+        <div class="error-message">
+            <h3>Setup Incomplete</h3>
+            <p>The following issues need to be resolved before you can use the assistant:</p>
+            <ul>
+                {% for message in setup_status.messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        
+        <div class="setup-instructions">
+            <h3>Setup Instructions</h3>
+            <p>To complete the setup:</p>
+            <ol>
+                <li>Make sure you've processed your audio files and generated embeddings:</li>
+                <pre>cd /Users/sanskar/Desktop/Project_RAG/RAG_Based_Teaching_Assistant
+python read_chunks.py</pre>
+                <li>Ensure Ollama is installed and running:</li>
+                <pre>ollama serve</pre>
+                <li>Refresh this page after completing these steps.</li>
+            </ol>
+        </div>
+        {% endif %}
+        
+        <div class="form-group">
+            <label for="question">Your Question</label>
+            <textarea 
+                id="question" 
+                placeholder="e.g., How do I create a responsive navigation bar? How can I implement CSS Grid?"
+                {% if not setup_status.ready %}disabled{% endif %}
+                autofocus
+            ></textarea>
+        </div>
+        
+        <div style="text-align: center;">
+            <button id="submit-btn" {% if not setup_status.ready %}disabled{% endif %}>
+                Search
+            </button>
+        </div>
+        
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Searching through course materials...</p>
+        </div>
+        
+        <div class="response-container">
+            <div class="response" id="response" style="display: none;"></div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('submit-btn').addEventListener('click', async function() {
+            const question = document.getElementById('question').value.trim();
+            
+            if (!question) {
+                alert('Please enter a question');
+                return;
+            }
+            
+            // Show loading indicator
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('response').style.display = 'none';
+            
+            try {
+                const formData = new FormData();
+                formData.append('question', question);
+                
+                const response = await fetch('/ask', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
+                // Hide loading indicator
+                document.getElementById('loading').style.display = 'none';
+                
+                // Show response
+                const responseElement = document.getElementById('response');
+                
+                if (data.error) {
+                    if (data.details) {
+                        // Format detailed error messages
+                        let errorHtml = `<div class="error-message"><h3>${data.error}</h3><ul>`;
+                        data.details.forEach(detail => {
+                            errorHtml += `<li>${detail}</li>`;
+                        });
+                        errorHtml += '</ul></div>';
+                        responseElement.innerHTML = errorHtml;
+                    } else {
+                        responseElement.innerHTML = `<div class="error-message"><h3>Error</h3><p>${data.error}</p></div>`;
+                    }
+                } else {
+                    responseElement.textContent = data.response || 'No response received';
+                }
+                
+                responseElement.style.display = 'block';
+                responseElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                
+            } catch (error) {
+                // Hide loading indicator
+                document.getElementById('loading').style.display = 'none';
+                
+                // Show error
+                const responseElement = document.getElementById('response');
+                responseElement.innerHTML = `<div class="error-message"><h3>Error</h3><p>${error.message}</p></div>`;
+                responseElement.style.display = 'block';
+            }
+        });
+        
+        // Allow submitting with Enter key
+        document.getElementById('question').addEventListener('keydown', function(event) {
+            if (event.key === 'Enter' && event.ctrlKey) {
+                document.getElementById('submit-btn').click();
+            }
+        });
+    </script>
+</body>
+</html>

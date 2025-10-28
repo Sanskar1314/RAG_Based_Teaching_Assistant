@@ -1,9 +1,11 @@
+#!/usr/bin/env python3
 import pandas as pd
 import joblib   
 import os   
 import requests
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
+import google.generativeai as genai
 
 
 def create_embeddings(text_list):
@@ -24,7 +26,20 @@ def inference(prompt):
     })
     response = r.json()
     print(response)
-    return response
+    return 
+
+def inference_gemini(prompt):
+    try:
+        # Configure the API key
+        genai.configure(api_key='AIzaSyDzpuOwbufXp94NnFTi1KBqRl6RTkm0xcg')
+        # Use gemini-pro model
+        model = genai.GenerativeModel('gemini-pro')
+        # Generate response
+        response = model.generate_content(prompt)  # Removed 'prompt=' keyword
+        return response.text
+    except Exception as e:
+        print(f"Error generating response with Gemini: {e}")
+        return None
 
 df = joblib.load("embeddings.joblib")  # Load the DataFrame from the file
 
@@ -43,9 +58,29 @@ new_df = df.loc[max_indx]
 
 prompt = f"""You are a helpful teaching assistant for the Sigma Web Development course.
 Answer the user's question below using ONLY the provided video subtitle chunks.
-Guide the user to the relevant videos and timestamps, and explain where they can learn about the topic.
-When mentioning timestamps, always convert the time from seconds to standard minute format (e.g., 850 seconds = 14 minutes 10 seconds).
-Do NOT repeat the subtitle chunks or say 'according to the provided chunks'.
+
+CRITICAL INSTRUCTIONS - YOU MUST FOLLOW THESE EXACTLY:
+
+1. NEVER start your response with phrases like "Based on the video subtitle chunks" or any reference to chunks
+2. NEVER mention "chunks", "subtitle chunks", or "provided information" in your response
+3. TIMESTAMP FORMAT: Convert ALL seconds to MM:SS format (e.g., 850 seconds = 14:10)
+   - INCORRECT: 1028:00, 1467:02 (these are not valid time formats)
+   - CORRECT: 17:08, 24:27 (minutes:seconds)
+4. ALWAYS include at least 2-3 specific video references in format "Video #X at MM:SS"
+5. NEVER exceed 59 in the seconds position (use proper minute:second conversion)
+
+HANDLING SUBJECTIVE QUESTIONS:
+- For questions about course quality, benefits, or why it's good:
+  - Provide a direct answer based on what the course actually offers
+  - Mention specific topics covered and teaching approach
+  - Include relevant timestamps where course benefits are discussed
+  - If no explicit mentions exist, focus on the course content and structure
+
+EXAMPLE CORRECT RESPONSES:
+"CSS is taught in Video #14 at 04:17 where it explains the basics. You can also learn about CSS selectors in Video #17 at 08:25."
+
+"This course is beneficial because it provides comprehensive coverage of web development fundamentals. In Video #01 at 03:45, the instructor explains the structured learning path from HTML to JavaScript. Video #14 at 02:30 demonstrates the hands-on approach with practical examples that help reinforce concepts."
+
 If the question is unrelated, reply: 'I can only answer questions related to the course.'
 If you don't know, reply: 'I don't know.'
 
@@ -56,8 +91,11 @@ Video subtitle chunks (for your reference only):
 """
 with open("prompt.txt","w") as f:
     f.write(prompt)
-response = inference(prompt)["response"]
-print(response)  # Add this line to see the actual response
+# response = inference(prompt)["response"]
+# print(response)  # Add this line to see the actual response
+
+response = inference_gemini(prompt)
+
 with open("response.txt","w") as f:
     f.write(response)
 # for index,item in new_df.iterrows():

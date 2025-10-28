@@ -1,5 +1,0 @@
-To learn about CSS, you can start with the video titled "Introduction to CSS" at timestamps 48:52-50:16 or 257:20-259:00. 
-
-These videos will cover the basics of CSS and how it's written. Additionally, you can also watch "Your First HTML Website" (02) for a brief introduction to CSS before diving into more details.
-
-By watching these videos, you'll gain a solid understanding of CSS and be able to learn styling from HTML using CSS, as mentioned in the video titled "Heading, Paragraphs and Links" (04).

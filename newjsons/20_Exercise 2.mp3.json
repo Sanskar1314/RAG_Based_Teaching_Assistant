@@ -1,0 +1,145 @@
+{
+    "chunks": [
+        {
+            "number": "20",
+            "title": "Exercise 2",
+            "start": 0.0,
+            "end": 12.6,
+            "text": " I gave you exercise 1, many of you solved it.  I also gave you a shoutout.  Now it's time for exercise 2.  And in this, we will do a challenge of CSS.  Irrespective of how many people are going to solve it,"
+        },
+        {
+            "number": "20",
+            "title": "Exercise 2",
+            "start": 12.6,
+            "end": 28.6,
+            "text": " you guys write Challenge Accepted in the comment section below.  Maintain high energy like this.  And listen to the question carefully and comment your answers.  Whoever writes Challenge Accepted first, I will give them a heart.  And whoever solves the question, will get a shoutout in the coming videos."
+        },
+        {
+            "number": "20",
+            "title": "Exercise 2",
+            "start": 28.6,
+            "end": 45.6,
+            "text": " I am very excited. Let's go to the computer screen.  Let's roll the intro.  Intro  So guys, I have come inside the computer screen.  And now I am going to give you exercise."
+        },
+        {
+            "number": "20",
+            "title": "Exercise 2",
+            "start": 45.6,
+            "end": 59.6,
+            "text": " So here I will do the first thing.  I will make a folder named Video 20.  So I will make a folder named Video 20.  And here I will simply open it by pressing Shift-Right-Click.  Now listen to me carefully."
+        },
+        {
+            "number": "20",
+            "title": "Exercise 2",
+            "start": 59.6,
+            "end": 73.6,
+            "text": " I am giving you an exercise of CSS.  In which you have to do is,  If you are going to get a paragraph,  Then in any div,  The first paragraph, you have to make the background yellow."
+        },
+        {
+            "number": "20",
+            "title": "Exercise 2",
+            "start": 73.6,
+            "end": 83.6,
+            "text": " And the color is red.  And you have to make 5 such divs.  And you have to make a CSS class.  In which you have to give this styling.  So I will frame this question."
+        },
+        {
+            "number": "20",
+            "title": "Exercise 2",
+            "start": 83.6,
+            "end": 95.6,
+            "text": " So here I have written the question.  CSS code to style a paragraph inside a div.  Such that, the first paragraph must have background color yellow.  And text color red.  So here you have seen that,"
+        },
+        {
+            "number": "20",
+            "title": "Exercise 2",
+            "start": 95.6,
+            "end": 113.6,
+            "text": " The first paragraph should have a yellow background color.  And text color red.  And the other paragraphs must have background color blue.  And text color white.  So I will comment this out."
+        },
+        {
+            "number": "20",
+            "title": "Exercise 2",
+            "start": 113.6,
+            "end": 123.6,
+            "text": " So that it does not interfere with our code.  And here I am going to write HTML code.  So this is for you.  lorem 23  And along with that here,"
+        },
+        {
+            "number": "20",
+            "title": "Exercise 2",
+            "start": 123.6,
+            "end": 135.6,
+            "text": " I am another para.  Okay, and I have written like this.  And I will make two divs like this.  And I will write p here.  I am also another para."
+        },
+        {
+            "number": "20",
+            "title": "Exercise 2",
+            "start": 135.6,
+            "end": 148.6,
+            "text": " And here I will make two divs like this.  Okay, and here you can see.  That we have to write CSS rules like this.  Such that,  The first paragraph of your div."
+        },
+        {
+            "number": "20",
+            "title": "Exercise 2",
+            "start": 148.6,
+            "end": 162.6,
+            "text": " Its styling should be different.  And the styling of these paragraphs should be different.  You don't have to put class in the paragraph.  Now don't say that I will put class in this paragraph.  No, you don't have to do anything in HTML."
+        },
+        {
+            "number": "20",
+            "title": "Exercise 2",
+            "start": 162.6,
+            "end": 172.6,
+            "text": " Do not touch the HTML.  I will write you.  Do not change this HTML.  This HTML should not be changed.  This is our condition."
+        },
+        {
+            "number": "20",
+            "title": "Exercise 2",
+            "start": 172.6,
+            "end": 183.6,
+            "text": " I hope you understood the question well.  So if I preview this HTML.  You can see that it will look like this.  It is a very simple HTML.  And this question is very basic."
+        },
+        {
+            "number": "20",
+            "title": "Exercise 2",
+            "start": 183.6,
+            "end": 192.6,
+            "text": " What happened in the last video?  Very few people answered.  One thing I would like to tell you.  That you write the challenge accepted in the comment section below.  And if anyone is solving this question."
+        },
+        {
+            "number": "20",
+            "title": "Exercise 2",
+            "start": 192.6,
+            "end": 204.6,
+            "text": " Then you put a hashtag of solution.  What hashtag will you put?  Write hashtag solution like this.  Write like this so that I can search.  By putting hashtag solution."
+        },
+        {
+            "number": "20",
+            "title": "Exercise 2",
+            "start": 204.6,
+            "end": 213.6,
+            "text": " And if the challenge is accepted, then write it.  This is mandatory for all of you.  If you have not accessed the playlist yet.  Access it.  Along with that, I have given the source code here."
+        },
+        {
+            "number": "20",
+            "title": "Exercise 2",
+            "start": 213.6,
+            "end": 223.6,
+            "text": " You can go to this website for notes.  And by clicking on notes here.  You can access the notes.  I have put all the notes here.  You can download the PDFs of HTML and CSS."
+        },
+        {
+            "number": "20",
+            "title": "Exercise 2",
+            "start": 223.6,
+            "end": 232.6,
+            "text": " And you can also download the chapter wise.  I need the solution of everyone.  I am telling you.  I hope you are enjoying this course.  So that's all for this video."
+        },
+        {
+            "number": "20",
+            "title": "Exercise 2",
+            "start": 232.6,
+            "end": 258.6,
+            "text": " Thank you so much for watching this video.  And I will see you next time.  Music."
+        }
+    ],
+    "text": " I gave you exercise 1, many of you solved it. I also gave you a shoutout. Now it's time for exercise 2. And in this, we will do a challenge of CSS. Irrespective of how many people are going to solve it, you guys write Challenge Accepted in the comment section below. Maintain high energy like this. And listen to the question carefully and comment your answers. Whoever writes Challenge Accepted first, I will give them a heart. And whoever solves the question, will get a shoutout in the coming videos. I am very excited. Let's go to the computer screen. Let's roll the intro. Intro So guys, I have come inside the computer screen. And now I am going to give you exercise. So here I will do the first thing. I will make a folder named Video 20. So I will make a folder named Video 20. And here I will simply open it by pressing Shift-Right-Click. Now listen to me carefully. I am giving you an exercise of CSS. In which you have to do is, If you are going to get a paragraph, Then in any div, The first paragraph, you have to make the background yellow. And the color is red. And you have to make 5 such divs. And you have to make a CSS class. In which you have to give this styling. So I will frame this question. So here I have written the question. CSS code to style a paragraph inside a div. Such that, the first paragraph must have background color yellow. And text color red. So here you have seen that, The first paragraph should have a yellow background color. And text color red. And the other paragraphs must have background color blue. And text color white. So I will comment this out. So that it does not interfere with our code. And here I am going to write HTML code. So this is for you. lorem 23 And along with that here, I am another para. Okay, and I have written like this. And I will make two divs like this. And I will write p here. I am also another para. And here I will make two divs like this. Okay, and here you can see. That we have to write CSS rules like this. Such that, The first paragraph of your div. Its styling should be different. And the styling of these paragraphs should be different. You don't have to put class in the paragraph. Now don't say that I will put class in this paragraph. No, you don't have to do anything in HTML. Do not touch the HTML. I will write you. Do not change this HTML. This HTML should not be changed. This is our condition. I hope you understood the question well. So if I preview this HTML. You can see that it will look like this. It is a very simple HTML. And this question is very basic. What happened in the last video? Very few people answered. One thing I would like to tell you. That you write the challenge accepted in the comment section below. And if anyone is solving this question. Then you put a hashtag of solution. What hashtag will you put? Write hashtag solution like this. Write like this so that I can search. By putting hashtag solution. And if the challenge is accepted, then write it. This is mandatory for all of you. If you have not accessed the playlist yet. Access it. Along with that, I have given the source code here. You can go to this website for notes. And by clicking on notes here. You can access the notes. I have put all the notes here. You can download the PDFs of HTML and CSS. And you can also download the chapter wise. I need the solution of everyone. I am telling you. I hope you are enjoying this course. So that's all for this video. Thank you so much for watching this video. And I will see you next time. Music."
+}
