@@ -6,6 +6,10 @@ import requests
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 import google.generativeai as genai
+from dotenv import load_dotenv
+import os
+load_dotenv()
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 
 def create_embeddings(text_list):
@@ -30,16 +34,13 @@ def inference(prompt):
 
 def inference_gemini(prompt):
     try:
-        # Configure the API key
-        genai.configure(api_key='AIzaSyDzpuOwbufXp94NnFTi1KBqRl6RTkm0xcg')
-        # Use gemini-pro model
-        model = genai.GenerativeModel('gemini-pro')
-        # Generate response
-        response = model.generate_content(prompt)  # Removed 'prompt=' keyword
-        return response.text
+        genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+        model = genai.GenerativeModel("gemini-1.5-flash")
+        response = model.generate_content(prompt)
+        return response.text if response and response.text else "No response generated."
     except Exception as e:
         print(f"Error generating response with Gemini: {e}")
-        return None
+        return "Error: Gemini generation failed."
 
 df = joblib.load("embeddings.joblib")  # Load the DataFrame from the file
 
