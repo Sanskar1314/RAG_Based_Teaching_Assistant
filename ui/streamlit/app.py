@@ -6,9 +6,15 @@ import requests
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 import joblib
+import google.generativeai as genai
+from dotenv import load_dotenv
 
 # Add parent directory to path to import from parent modules
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+# Load environment variables
+load_dotenv(os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), ".env"))
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 def create_embeddings(text_list):
     r = requests.post("http://localhost:11434/api/embed", json={
@@ -18,14 +24,14 @@ def create_embeddings(text_list):
     embedding = r.json()['embeddings']
     return embedding
 
-def inference(prompt):
-    r = requests.post("http://localhost:11434/api/generate", json={
-        "model": "llama3.2:3b",
-        "prompt": prompt,
-        "stream": False
-    })
-    response = r.json()
-    return response
+def inference_gemini(prompt):
+    try:
+        model = genai.GenerativeModel("gemini-2.0-flash")
+        response = model.generate_content(prompt)
+        return response.text if response and response.text else "No response generated."
+    except Exception as e:
+        print(f"Error generating response with Gemini: {e}")
+        return f"Error: Gemini generation failed - {str(e)}"
 
 def main():
     st.set_page_config(
@@ -214,9 +220,29 @@ def main():
                     # Create prompt
                     prompt = f"""You are a helpful teaching assistant for the Sigma Web Development course.
 Answer the user's question below using ONLY the provided video subtitle chunks.
-Guide the user to the relevant videos and timestamps, and explain where they can learn about the topic.
-When mentioning timestamps, always convert the time from seconds to standard minute format (e.g., 850 seconds = 14 minutes 10 seconds).
-Do NOT repeat the subtitle chunks or say 'according to the provided chunks'.
+
+CRITICAL INSTRUCTIONS - YOU MUST FOLLOW THESE EXACTLY:
+
+1. NEVER start your response with phrases like "Based on the video subtitle chunks" or any reference to chunks
+2. NEVER mention "chunks", "subtitle chunks", or "provided information" in your response
+3. TIMESTAMP FORMAT: Convert ALL seconds to MM:SS format (e.g., 850 seconds = 14:10)
+   - INCORRECT: 1028:00, 1467:02 (these are not valid time formats)
+   - CORRECT: 17:08, 24:27 (minutes:seconds)
+4. ALWAYS include at least 2-3 specific video references in format "Video #X at MM:SS"
+5. NEVER exceed 59 in the seconds position (use proper minute:second conversion)
+
+HANDLING SUBJECTIVE QUESTIONS:
+- For questions about course quality, benefits, or why it's good:
+  - Provide a direct answer based on what the course actually offers
+  - Mention specific topics covered and teaching approach
+  - Include relevant timestamps where course benefits are discussed
+  - If no explicit mentions exist, focus on the course content and structure
+
+EXAMPLE CORRECT RESPONSES:
+"CSS is taught in Video #14 at 04:17 where it explains the basics. You can also learn about CSS selectors in Video #17 at 08:25."
+
+"This course is beneficial because it provides comprehensive coverage of web development fundamentals. In Video #01 at 03:45, the instructor explains the structured learning path from HTML to JavaScript. Video #14 at 02:30 demonstrates the hands-on approach with practical examples that help reinforce concepts."
+
 If the question is unrelated, reply: 'I can only answer questions related to the course.'
 If you don't know, reply: 'I don't know.'
 
@@ -226,8 +252,8 @@ Video subtitle chunks (for your reference only):
 {new_df[["title", "number", "start", "end", "text"]].to_json(orient="records")}
 """
                     
-                    # Get response from inference
-                    response = inference(prompt)["response"]
+                    # Get response from Gemini API
+                    response = inference_gemini(prompt)
                     
                     # Display response in a modern container
                     st.markdown("""
@@ -235,11 +261,9 @@ Video subtitle chunks (for your reference only):
                         <h3 style="color: #667eea; margin-top: 0; display: flex; align-items: center;">
                             🤖 AI Answer
                         </h3>
-                        <div style="color: white; font-size: 16px; line-height: 1.7; margin-top: 1rem;">
-                            {response}
-                        </div>
                     </div>
-                    """.format(response=response), unsafe_allow_html=True)
+                    """, unsafe_allow_html=True)
+                    st.markdown(f'<div style="color: white; font-size: 16px; line-height: 1.7; margin-top: -1rem; padding: 0 2rem 2rem 2rem; background: linear-gradient(135deg, #2d2d2d 0%, #3d3d3d 100%); border-radius: 0 0 15px 15px; margin-bottom: 1rem;">{response}</div>', unsafe_allow_html=True)
                     
                     # Show source videos in a modern expander
                     with st.expander("📚 Source Videos & Timestamps", expanded=False):
@@ -249,9 +273,9 @@ Video subtitle chunks (for your reference only):
                             minutes = int(row['start'] // 60)
                             seconds = int(row['start'] % 60)
                             st.markdown(f"""
-                            <div style="background: white; padding: 1rem; margin: 0.5rem 0; border-radius: 8px; border-left: 4px solid #667eea; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-                                <strong>🎥 Video {row['number']}: {row['title']}</strong><br>
-                                <span style="color: #667eea; font-weight: 600;">⏰ Timestamp: {minutes}:{seconds:02d}</span>
+                            <div style="background: #3d3d3d; padding: 1rem; margin: 0.5rem 0; border-radius: 8px; border-left: 4px solid #667eea; box-shadow: 0 2px 5px rgba(0,0,0,0.3);">
+                                <strong style="color: white;">🎥 Video {row['number']}: {row['title']}</strong><br>
+                                <span style="color: #8fa3ff; font-weight: 600;">⏰ Timestamp: {minutes}:{seconds:02d}</span>
                             </div>
                             """, unsafe_allow_html=True)
                         st.markdown('</div>', unsafe_allow_html=True)
