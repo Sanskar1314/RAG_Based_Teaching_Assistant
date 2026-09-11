@@ -1,0 +1,17 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8501:8501"    # Streamlit
+      - "5001:5001"    # Flask (if needed)
+    env_file:
+      - .env
+    environment:
+      - OLLAMA_HOST=http://host.docker.internal:11434
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      # Mount embeddings file (excluded from .dockerignore for size reasons)
+      # Remove this if you include embeddings.joblib in the image
+      - ./embeddings.joblib:/app/embeddings.joblib:ro
+    restart: unless-stopped

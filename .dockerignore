@@ -1,0 +1,12 @@
+.git
+.gitignore
+.DS_Store
+__pycache__
+*.pyc
+audios/
+downloads_audio/
+jsons/
+newjsons/
+*.mp3
+*.mp4
+.env
