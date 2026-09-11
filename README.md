@@ -2,6 +2,8 @@
 
 > An AI-powered teaching assistant for the **Sigma Web Development Course** that answers questions using actual video subtitles and timestamps, built with Retrieval-Augmented Generation (RAG).
 
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-sigmalearn--ai.vercel.app-6366f1?style=for-the-badge)](https://sigmalearn-ai.vercel.app/)
+
 ![Next.js](https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js)
 ![Gemini](https://img.shields.io/badge/Gemini_API-2.0_Flash_Lite-blue?style=flat-square&logo=google)
 ![Vercel](https://img.shields.io/badge/Deployed_on-Vercel-black?style=flat-square&logo=vercel)
@@ -157,7 +159,9 @@ If you hit rate limits, the app **automatically retries** with exponential backo
 
 ## 📸 Screenshots
 
-> The SigmaLearn AI chat interface with timestamped video references and source cards.
+[![SigmaLearn AI Live Demo](docs/screenshot.png)](https://sigmalearn-ai.vercel.app/)
+
+> 🔗 **Live at [sigmalearn-ai.vercel.app](https://sigmalearn-ai.vercel.app/)**
 
 ---
 
