@@ -1,32 +1,70 @@
 /**
  * Gemini API wrapper for embedding and generation.
+ * Uses retry with exponential backoff to handle free-tier rate limits (429).
  */
 
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
+/** Sleep helper */
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
 /**
- * Create an embedding for a text using Gemini's text-embedding-004 model.
+ * Retry a Gemini API call with exponential backoff on 429 rate-limit errors.
+ * @param {Function} fn - Async function to retry
+ * @param {number} maxRetries - Max number of retries (default 4)
+ */
+async function withRetry(fn, maxRetries = 4) {
+  let delay = 5000; // start with 5s
+  for (let attempt = 0; attempt <= maxRetries; attempt++) {
+    try {
+      return await fn();
+    } catch (err) {
+      const isRateLimit =
+        err?.status === 429 ||
+        err?.message?.includes('429') ||
+        err?.message?.toLowerCase().includes('quota') ||
+        err?.message?.toLowerCase().includes('rate');
+
+      if (isRateLimit && attempt < maxRetries) {
+        console.warn(`[Gemini] Rate limited. Retrying in ${delay / 1000}s... (attempt ${attempt + 1}/${maxRetries})`);
+        await sleep(delay);
+        delay = Math.min(delay * 2, 60000); // cap at 60s
+      } else {
+        throw err;
+      }
+    }
+  }
+}
+
+/**
+ * Create an embedding for a text using Gemini's embedding model.
  * @param {string} text - The text to embed
  * @returns {Promise<number[]>} The embedding vector
  */
 export async function embedText(text) {
-  const model = genAI.getGenerativeModel({ model: 'gemini-embedding-001' });
-  const result = await model.embedContent(text);
-  return result.embedding.values;
+  return withRetry(async () => {
+    const model = genAI.getGenerativeModel({ model: 'gemini-embedding-001' });
+    const result = await model.embedContent(text);
+    return result.embedding.values;
+  });
 }
 
 /**
- * Generate a response using Gemini 2.0 Flash.
+ * Generate a response using Gemini Flash Lite (best free-tier quota).
  * @param {string} prompt - The full prompt to send
  * @returns {Promise<string>} The generated text response
  */
 export async function generateResponse(prompt) {
-  const model = genAI.getGenerativeModel({ model: 'gemini-3.6-flash' });
-  const result = await model.generateContent(prompt);
-  const response = result.response;
-  return response.text();
+  // Small delay to avoid back-to-back burst after embedText call
+  await sleep(500);
+  return withRetry(async () => {
+    // gemini-2.0-flash-lite has the highest free quota (30 RPM, 1500 RPD)
+    const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash-lite' });
+    const result = await model.generateContent(prompt);
+    return result.response.text();
+  });
 }
 
 /**
