@@ -46,16 +46,36 @@ export function loadEmbeddings() {
  * @param {number} topK - Number of top chunks to return
  * @returns {Array} Top-K chunks sorted by relevance
  */
+// Synonym expansion for spoken audio — subtitles use shorthand
+const SYNONYMS = {
+  flexbox: ['flex', 'flexbox'],
+  flex: ['flex', 'flexbox'],
+  grid: ['grid', 'css grid'],
+  javascript: ['javascript', 'js'],
+  js: ['javascript', 'js'],
+  html: ['html', 'hypertext'],
+  css: ['css', 'style', 'styling', 'stylesheet'],
+  responsive: ['responsive', 'media query', 'mobile'],
+  animation: ['animation', 'animate', 'transition'],
+  selector: ['selector', 'selectors'],
+  form: ['form', 'forms', 'input'],
+};
+
 export function searchSimilarByText(queryText, topK = 5) {
   const data = loadEmbeddings();
 
-  const words = queryText
+  const baseWords = queryText
     .toLowerCase()
     .replace(/[^a-z0-9\s]/g, ' ')
     .split(/\s+/)
     .filter((w) => w.length > 1 && !STOPWORDS.has(w));
 
-  const terms = words.length > 0 ? words : queryText.toLowerCase().split(/\s+/);
+  // Expand with synonyms
+  const expanded = new Set(baseWords);
+  for (const w of baseWords) {
+    if (SYNONYMS[w]) SYNONYMS[w].forEach((s) => expanded.add(s));
+  }
+  const terms = expanded.size > 0 ? [...expanded] : queryText.toLowerCase().split(/\s+/);
   const totalDocs = data.length;
 
   // Calculate Document Frequencies
