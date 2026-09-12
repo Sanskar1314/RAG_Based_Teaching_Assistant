@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
-import { searchSimilarByText } from '@/lib/rag';
-import { generateResponse, buildPrompt } from '@/lib/gemini';
+import { searchSimilarByEmbedding, searchSimilarByText } from '@/lib/rag';
+import { embedText, generateResponse, buildPrompt } from '@/lib/gemini';
 
 export async function POST(request) {
   try {
@@ -25,8 +25,17 @@ export async function POST(request) {
 
     const trimmedQuestion = question.trim();
 
-    // 1. Search for top-5 most relevant subtitle chunks
-    const topChunks = searchSimilarByText(trimmedQuestion, 5);
+    // 1. Embed the user's question for semantic search
+    let topChunks;
+    try {
+      const queryEmbedding = await embedText(trimmedQuestion);
+      topChunks = searchSimilarByEmbedding(queryEmbedding, 5);
+      console.log(`[API] Semantic search found top similarity: ${topChunks[0]?.similarity?.toFixed(3)}`);
+    } catch (embedErr) {
+      // Fallback to TF-IDF if embedding fails
+      console.warn('[API] Embedding failed, falling back to TF-IDF:', embedErr?.message);
+      topChunks = searchSimilarByText(trimmedQuestion, 5);
+    }
 
     // 2. Build the RAG prompt
     const prompt = buildPrompt(trimmedQuestion, topChunks);

@@ -1,6 +1,6 @@
 /**
  * RAG (Retrieval Augmented Generation) search engine.
- * Fast TF-IDF + Term match retrieval over course video subtitle chunks.
+ * Semantic search using cosine similarity over pre-computed Gemini embeddings.
  */
 
 import fs from 'fs';
@@ -8,26 +8,9 @@ import path from 'path';
 
 let cachedData = null;
 
-const STOPWORDS = new Set([
-  'a', 'about', 'above', 'after', 'again', 'against', 'all', 'am', 'an', 'and',
-  'any', 'are', 'aren\'t', 'as', 'at', 'be', 'because', 'been', 'before', 'being',
-  'below', 'between', 'both', 'but', 'by', 'can', 'cant', 'cannot', 'could',
-  'course', 'did', 'do', 'does', 'doing', 'don\'t', 'down', 'during', 'each',
-  'few', 'for', 'from', 'further', 'had', 'has', 'have', 'having', 'he', 'her',
-  'here', 'hers', 'herself', 'him', 'himself', 'his', 'how', 'i', 'if', 'in',
-  'into', 'is', 'it', 'its', 'itself', 'just', 'me', 'more', 'most', 'my',
-  'myself', 'no', 'nor', 'not', 'of', 'off', 'on', 'once', 'only', 'or', 'other',
-  'our', 'ours', 'ourselves', 'out', 'over', 'own', 'same', 'she', 'should',
-  'so', 'some', 'such', 'than', 'that', 'the', 'their', 'theirs', 'them',
-  'themselves', 'then', 'there', 'these', 'they', 'this', 'those', 'through',
-  'to', 'too', 'under', 'until', 'up', 'very', 'was', 'we', 'were', 'what',
-  'when', 'where', 'which', 'while', 'who', 'whom', 'why', 'with', 'would',
-  'you', 'your', 'yours', 'yourself', 'yourselves', 'taught', 'explain',
-  'explained', 'tell', 'show'
-]);
-
 /**
  * Load embeddings and metadata from web/data/embeddings.json.
+ * Cached in memory after first load.
  */
 export function loadEmbeddings() {
   if (cachedData) return cachedData;
@@ -41,44 +24,72 @@ export function loadEmbeddings() {
 }
 
 /**
- * Perform hybrid TF-IDF search over the subtitle chunks.
+ * Compute cosine similarity between two vectors.
+ * @param {number[]} a
+ * @param {number[]} b
+ * @returns {number} similarity score between -1 and 1
+ */
+export function cosineSimilarity(a, b) {
+  let dot = 0, normA = 0, normB = 0;
+  for (let i = 0; i < a.length; i++) {
+    dot += a[i] * b[i];
+    normA += a[i] * a[i];
+    normB += b[i] * b[i];
+  }
+  if (normA === 0 || normB === 0) return 0;
+  return dot / (Math.sqrt(normA) * Math.sqrt(normB));
+}
+
+/**
+ * Semantic search: find top-K most similar chunks to a query embedding.
+ * Uses cosine similarity over pre-computed Gemini embeddings.
+ * @param {number[]} queryEmbedding - Embedding vector of the user's question
+ * @param {number} topK - Number of top chunks to return
+ * @returns {Array} Top-K chunks sorted by semantic similarity
+ */
+export function searchSimilarByEmbedding(queryEmbedding, topK = 5) {
+  const data = loadEmbeddings();
+
+  const scored = data.map((chunk) => ({
+    ...chunk,
+    similarity: chunk.embedding
+      ? cosineSimilarity(queryEmbedding, chunk.embedding)
+      : 0,
+  }));
+
+  scored.sort((a, b) => b.similarity - a.similarity);
+
+  // Return top-K, stripping the large embedding vector from response
+  return scored.slice(0, topK).map(({ embedding, ...rest }) => rest);
+}
+
+/**
+ * Fallback TF-IDF text search (used if embedding is unavailable).
  * @param {string} queryText - User's question
  * @param {number} topK - Number of top chunks to return
  * @returns {Array} Top-K chunks sorted by relevance
  */
-// Synonym expansion for spoken audio — subtitles use shorthand
-const SYNONYMS = {
-  flexbox: ['flex', 'flexbox'],
-  flex: ['flex', 'flexbox'],
-  grid: ['grid', 'css grid'],
-  javascript: ['javascript', 'js'],
-  js: ['javascript', 'js'],
-  html: ['html', 'hypertext'],
-  css: ['css', 'style', 'styling', 'stylesheet'],
-  responsive: ['responsive', 'media query', 'mobile'],
-  animation: ['animation', 'animate', 'transition'],
-  selector: ['selector', 'selectors'],
-  form: ['form', 'forms', 'input'],
-};
-
 export function searchSimilarByText(queryText, topK = 5) {
   const data = loadEmbeddings();
 
-  const baseWords = queryText
+  const STOPWORDS = new Set([
+    'a', 'about', 'an', 'and', 'are', 'as', 'at', 'be', 'been', 'but', 'by',
+    'can', 'do', 'does', 'doing', 'for', 'from', 'had', 'has', 'have', 'he',
+    'her', 'him', 'how', 'i', 'if', 'in', 'into', 'is', 'it', 'its', 'just',
+    'me', 'my', 'no', 'not', 'of', 'on', 'or', 'our', 'out', 'so', 'some',
+    'than', 'that', 'the', 'their', 'them', 'then', 'there', 'these', 'they',
+    'this', 'those', 'to', 'too', 'up', 'was', 'we', 'were', 'what', 'when',
+    'where', 'which', 'who', 'why', 'with', 'you', 'your',
+  ]);
+
+  const terms = queryText
     .toLowerCase()
     .replace(/[^a-z0-9\s]/g, ' ')
     .split(/\s+/)
     .filter((w) => w.length > 1 && !STOPWORDS.has(w));
 
-  // Expand with synonyms
-  const expanded = new Set(baseWords);
-  for (const w of baseWords) {
-    if (SYNONYMS[w]) SYNONYMS[w].forEach((s) => expanded.add(s));
-  }
-  const terms = expanded.size > 0 ? [...expanded] : queryText.toLowerCase().split(/\s+/);
   const totalDocs = data.length;
 
-  // Calculate Document Frequencies
   const dfMap = {};
   for (const term of terms) {
     let count = 0;
@@ -88,40 +99,23 @@ export function searchSimilarByText(queryText, topK = 5) {
     dfMap[term] = count;
   }
 
-  // Score each chunk using TF-IDF + Title relevance
   const scored = data.map((chunk) => {
     const textLower = chunk.text.toLowerCase();
     const titleLower = chunk.title.toLowerCase();
-
     let score = 0;
 
     for (const term of terms) {
-      // Term Frequency in text
       const matches = (textLower.match(new RegExp(term, 'g')) || []).length;
       if (matches > 0) {
         const idf = Math.log((totalDocs + 1) / (dfMap[term] + 1));
         score += matches * idf;
       }
-
-      // Title match boost
-      if (titleLower.includes(term)) {
-        score += 8.0;
-      }
+      if (titleLower.includes(term)) score += 8.0;
     }
 
-    return {
-      ...chunk,
-      similarity: score,
-    };
+    return { ...chunk, similarity: score };
   });
 
-  // Sort descending by relevance score
   scored.sort((a, b) => b.similarity - a.similarity);
-
-  // Return top-K without embedding vector
   return scored.slice(0, topK).map(({ embedding, ...rest }) => rest);
-}
-
-export function searchSimilar(queryEmbedding, topK = 5) {
-  return searchSimilarByText('', topK);
 }
