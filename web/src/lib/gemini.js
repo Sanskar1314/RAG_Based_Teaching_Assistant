@@ -60,8 +60,8 @@ export async function generateResponse(prompt) {
   // Small delay to avoid back-to-back burst after embedText call
   await sleep(500);
   return withRetry(async () => {
-    // gemini-2.0-flash-lite has the highest free quota (30 RPM, 1500 RPD)
-    const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash-lite' });
+    // gemini-3.5-flash-lite has the highest free quota
+    const model = genAI.getGenerativeModel({ model: 'gemini-3.5-flash-lite' });
     const result = await model.generateContent(prompt);
     return result.response.text();
   });
