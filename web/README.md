@@ -22,7 +22,7 @@ A **RAG-powered (Retrieval-Augmented Generation)** teaching assistant for the [S
 | AI Generation | Google Gemini (`gemini-3.5-flash-lite`) |
 | Embeddings | Google Gemini (`gemini-embedding-001`, 1024-dim) |
 | Vector DB | Pinecone (`sigmalearn` index) |
-| Deployment | Vercel |
+| Deployment | Vercel / Docker |
 
 ---
 
@@ -86,6 +86,8 @@ web/
 │       └── gemini.js             # Gemini embedding + generation + prompt builder
 ├── data/
 │   └── embeddings.json           # Pre-computed subtitle embeddings (1727 chunks)
+├── Dockerfile                    # Multi-stage production Docker build
+├── docker-compose.yml            # Docker Compose for local container run
 ├── upload_to_pinecone.mjs        # One-time script to seed Pinecone index
 └── .env.local                    # API keys (not committed)
 ```
@@ -109,6 +111,36 @@ User Question
      ▼
 Response to User
 ```
+
+---
+
+## 🐳 Docker
+
+Run the app locally in a container (no Node.js install required):
+
+```bash
+cd web
+
+# Build and start
+docker compose up --build
+```
+
+Pass API keys via environment:
+
+```bash
+GEMINI_API_KEY=your_key \
+PINECONE_API_KEY=your_key \
+PINECONE_INDEX=sigmalearn \
+docker compose up --build
+```
+
+Or create a `.env` file in `web/` and run:
+
+```bash
+docker compose --env-file .env.local up --build
+```
+
+App will be available at **http://localhost:3000**.
 
 ---
 
