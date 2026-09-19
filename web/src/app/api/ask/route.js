@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { searchPinecone, searchSimilarByEmbedding, searchSimilarByText } from '@/lib/rag';
+import { searchPinecone, searchSimilarByEmbedding } from '@/lib/rag';
 import { embedText, generateResponse, buildPrompt } from '@/lib/gemini';
 
 export async function POST(request) {
@@ -49,9 +49,7 @@ export async function POST(request) {
     }
 
     if (!topChunks) {
-      topChunks = searchSimilarByText(trimmedQuestion, 5);
-      searchMethod = 'tfidf';
-      console.log('[API] TF-IDF fallback search used');
+      return NextResponse.json({ error: 'Could not generate an embedding for your question. Please try again.' }, { status: 500 });
     }
 
     console.log(`[API] Search method used: ${searchMethod}`);
