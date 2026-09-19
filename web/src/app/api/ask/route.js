@@ -1,12 +1,10 @@
 import { NextResponse } from 'next/server';
-import { searchSimilarByEmbedding, searchSimilarByText } from '@/lib/rag';
+import { searchPinecone, searchSimilarByEmbedding, searchSimilarByText } from '@/lib/rag';
 import { embedText, generateResponse, buildPrompt } from '@/lib/gemini';
 
 export async function POST(request) {
   try {
-    // Check API key is present
     if (!process.env.GEMINI_API_KEY) {
-      console.error('[API] GEMINI_API_KEY environment variable is not set');
       return NextResponse.json(
         { error: 'Server configuration error: GEMINI_API_KEY is not set. Add it in Vercel → Settings → Environment Variables.' },
         { status: 500 }
@@ -17,30 +15,50 @@ export async function POST(request) {
     const { question } = body;
 
     if (!question || typeof question !== 'string' || question.trim().length === 0) {
-      return NextResponse.json(
-        { error: 'Please enter a valid question.' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: 'Please enter a valid question.' }, { status: 400 });
     }
 
     const trimmedQuestion = question.trim();
 
-    // 1. Embed the user's question for semantic search
-    let topChunks;
+    // 1. Embed the user's question
+    let queryEmbedding = null;
     try {
-      const queryEmbedding = await embedText(trimmedQuestion);
-      topChunks = searchSimilarByEmbedding(queryEmbedding, 5);
-      console.log(`[API] Semantic search found top similarity: ${topChunks[0]?.similarity?.toFixed(3)}`);
+      queryEmbedding = await embedText(trimmedQuestion);
     } catch (embedErr) {
-      // Fallback to TF-IDF if embedding fails
-      console.warn('[API] Embedding failed, falling back to TF-IDF:', embedErr?.message);
-      topChunks = searchSimilarByText(trimmedQuestion, 5);
+      console.warn('[API] Embedding failed:', embedErr?.message);
     }
 
-    // 2. Build the RAG prompt
+    // 2. Search: Pinecone → in-memory cosine → TF-IDF (cascade fallback)
+    let topChunks;
+    let searchMethod = 'unknown';
+
+    if (queryEmbedding && process.env.PINECONE_API_KEY) {
+      try {
+        topChunks = await searchPinecone(queryEmbedding, 5);
+        searchMethod = 'pinecone';
+        console.log(`[API] Pinecone search ✅ top score: ${topChunks[0]?.similarity?.toFixed(3)}`);
+      } catch (pcErr) {
+        console.warn('[API] Pinecone failed, falling back to in-memory:', pcErr?.message);
+      }
+    }
+
+    if (!topChunks && queryEmbedding) {
+      topChunks = searchSimilarByEmbedding(queryEmbedding, 5);
+      searchMethod = 'in-memory cosine';
+      console.log(`[API] In-memory search ✅ top score: ${topChunks[0]?.similarity?.toFixed(3)}`);
+    }
+
+    if (!topChunks) {
+      topChunks = searchSimilarByText(trimmedQuestion, 5);
+      searchMethod = 'tfidf';
+      console.log('[API] TF-IDF fallback search used');
+    }
+
+    console.log(`[API] Search method used: ${searchMethod}`);
+
+    // 3. Build prompt and generate response
     const prompt = buildPrompt(trimmedQuestion, topChunks);
 
-    // 3. Generate response using Gemini
     let responseText;
     try {
       responseText = await generateResponse(prompt);
@@ -55,7 +73,7 @@ export async function POST(request) {
       return NextResponse.json({ error: userMsg }, { status: 500 });
     }
 
-    // 4. Return formatted response and video sources
+    // 4. Return response and sources
     const sources = topChunks.map((chunk) => ({
       title: chunk.title,
       number: chunk.number,
@@ -67,9 +85,6 @@ export async function POST(request) {
     return NextResponse.json({ response: responseText, sources });
   } catch (err) {
     console.error('[API] Unexpected error:', err);
-    return NextResponse.json(
-      { error: `Unexpected error: ${err?.message || err}` },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: `Unexpected error: ${err?.message || err}` }, { status: 500 });
   }
 }
