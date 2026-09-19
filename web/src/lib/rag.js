@@ -29,7 +29,7 @@ function getPineconeIndex() {
 /**
  * Load embeddings.json into memory (used as fallback).
  */
-export function loadEmbeddings() {
+function loadEmbeddings() {
   if (cachedData) return cachedData;
   const dataPath = path.join(process.cwd(), 'data', 'embeddings.json');
   const raw = fs.readFileSync(dataPath, 'utf-8');
@@ -41,7 +41,7 @@ export function loadEmbeddings() {
 /**
  * Cosine similarity between two vectors (used in fallback).
  */
-export function cosineSimilarity(a, b) {
+function cosineSimilarity(a, b) {
   let dot = 0, normA = 0, normB = 0;
   for (let i = 0; i < a.length; i++) {
     dot += a[i] * b[i];

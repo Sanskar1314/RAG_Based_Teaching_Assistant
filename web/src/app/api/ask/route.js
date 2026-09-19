@@ -28,7 +28,7 @@ export async function POST(request) {
       console.warn('[API] Embedding failed:', embedErr?.message);
     }
 
-    // 2. Search: Pinecone → in-memory cosine → TF-IDF (cascade fallback)
+    // 2. Search: Pinecone → in-memory cosine fallback
     let topChunks;
     let searchMethod = 'unknown';
 
